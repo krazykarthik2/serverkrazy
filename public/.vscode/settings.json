@@ -1,0 +1,11 @@
+{
+    "editor.fontFamily": "cascadia code",
+    "editor.fontLigatures": false,
+    "editor.formatOnType": true,
+    "debug.console.fontFamily": "cascadia code",
+    "notebook.output.fontFamily": "",
+    "chat.editor.fontFamily": "cascadia code",
+    "terminal.integrated.localEchoStyle": "dim",
+    "scm.inputFontFamily": "editor",
+    "markdown.preview.fontFamily": "'cascadia code','poppins',sans-serif"
+}

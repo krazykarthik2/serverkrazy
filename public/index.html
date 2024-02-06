@@ -1,0 +1,6128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="google-signin-client_id"
+      content="5605404619-a906f2a1l0ja5raaf1642q3qtrjtvorv.apps.googleusercontent.com"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-adsense-account" content="ca-pub-1522483650864697" />
+    <link
+      rel="icon"
+      href="https://assets.dryicons.com/uploads/icon/svg/10837/01b14471-2528-49eb-9a80-ab7251245415.svg"
+    />
+    <title>Serverkrazy</title>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1522483650864697"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"
+    ></script>
+
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"
+    ></script> 
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <script src="utilites.js"></script>
+    <script src="backend.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/googleapis@122.0.0/build/src/index.min.js"></script>
+  </head>
+
+  <body>
+    <button onclick="authenticate().then(loadClient)">
+      authorize and load
+    </button>
+    <button onclick="execute()">execute</button>
+    <script>
+      //   function authenticate() {
+      //     return gapi.auth2.getAuthInstance()
+      //         .signIn({scope: "https://www.googleapis.com/auth/contacts https://www.googleapis.com/auth/contacts.readonly"})
+      //         .then(function() { console.log("Sign-in successful"); },
+      //               function(err) { console.error("Error signing in", err); });
+      //   }
+      //   function loadClient() {
+      //     gapi.client.setApiKey(firebaseConfig.clientId);
+      //     return gapi.client.load("https://people.googleapis.com/$discovery/rest?version=v1")
+      //         .then(function() { console.log("GAPI client loaded for API"); },
+      //               function(err) { console.error("Error loading GAPI client for API", err); });
+      //   }
+      //   // Make sure the client is loaded and sign-in is complete before calling this method.
+      //   function execute() {
+      //     return gapi.client.people.people.searchContacts({
+      //       "pageSize": 40,
+      //       "query": "goparaju maruthi jio",
+      //       "readMask": "names,phoneNumbers,photos",
+      //       "sources": [
+      //         "READ_SOURCE_TYPE_CONTACT"
+      //       ]
+      //     })
+      //         .then(function(response) {
+      //                 // Handle the results here (response.result has the parsed body).
+      //                 console.log("Response", response);
+      //               },
+      //               function(err) { console.error("Execute error", err); });
+      //   }
+      //let policies={scope:'profile https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/user.birthday.read https://www.googleapis.com/auth/contacts.readonly email',client_id:firebaseConfig.clientId};
+      //   gapi.load("client:auth2", function() {
+      //   gapi.auth2.authorize(policies)
+      //   //  gapi.auth2.init({client_id: firebaseConfig.clientId});
+      //   });
+    </script>
+    <div
+      class="frame-1"
+      rootScreen
+      noselect
+      ng-app="App"
+      ng-controller="AppController"
+    >
+      <div class="rectangle-2" all noptrevt></div>
+
+      <div class="component-7" allc noptrevt>
+        <div class="ellipse-3" flow></div>
+
+        <div class="ellipse-4" flow></div>
+
+        <div class="ellipse-5" flow></div>
+
+        <div class="ellipse-7" flow></div>
+
+        <div class="ellipse-8" flow></div>
+
+        <div class="ellipse-12" flow></div>
+
+        <div class="ellipse-2" flow></div>
+
+        <div class="ellipse-6" flow></div>
+
+        <div class="ellipse-9" flow></div>
+
+        <div class="ellipse-11" flow></div>
+
+        <div class="ellipse-10" flow></div>
+      </div>
+
+      <div class="rectangle-1" all noptrevt></div>
+
+      <div class="msgbucket" id="msgBucket" frame4c></div>
+
+      <button
+        accesskey="b"
+        onclick="back()"
+        class="component-12"
+        flow
+        frame2c
+        frame3c
+        frame4c
+        frame5c
+        frame8c
+        frame10c
+        frame11c
+        frame9c
+      >
+        <div class="ellipse-16"></div>
+
+        <div class="icon arrow-left"></div>
+      </button>
+      <div class="server-krazy" noptrevt all>ServerKRAZY</div>
+
+      <div
+        class="component-1"
+        frame1
+        frame2
+        frame3
+        frame4
+        frame5
+        frame8
+        frame11
+        frame10
+      >
+        <div
+          class="icon threedots"
+          frame1
+          frame2
+          frame3
+          frame4
+          frame5
+          frame8
+          frame11
+          frame10
+        >
+          
+        </div>
+
+        <button
+          flow
+          class="icon search btnDum"
+          onclick="shiftFrame(11)"
+          frame1
+          frame2
+          frame3
+          frame4
+          frame5
+          frame8
+          frame11
+        >
+          
+        </button>
+
+        <button
+          flow
+          class="icon gear btnDum"
+          onclick="shiftFrame(10)"
+          frame1
+          frame2
+          frame3
+          frame4
+          frame5
+          frame8
+          frame11
+        >
+          
+        </button>
+        <div flow class="icon gear btnDum" frame10></div>
+        <div flow class="icon gear gear2 btnDum" frame10></div>
+      </div>
+
+      <button
+        flow
+        onclick="shiftFrame(9)"
+        class="component-6 btnDum"
+        frame1c
+        ng-show="!(isServer)"
+        accesskey="q"
+      >
+        <div class="rectangle-9 partDum" flow></div>
+        <div class="rectangle-7 partDum" flow></div>
+
+        <div class="icon qrcodebg partDum" flow></div>
+      </button>
+      <div class="glass" frame6 frame7></div>
+
+      <div all>
+        <div class="component-2" all flow>
+          <div class="rectangle-3" noptrevt frame1 frame5></div>
+          <img
+            accesskey="p"
+            src="{{  disp(profilePic , 'profilepic.png') }}"
+            width="120"
+            height="120"
+            onclick="shiftFrame(5)"
+            class="ellipse-1"
+            frame1
+            frame2
+            frame3
+            frame4
+            frame5
+            frame6
+            frame9c
+          />
+
+          <div class="hi" noptrevt frame1 frame5>Hi,</div>
+
+          <div class="_user" noptrevt frame1>{{ short(user.displayName) }}</div>
+          <div class="_user" noptrevt frame5>{{ user.displayName }}</div>
+        </div>
+      </div>
+      <div flow class="searchBar inputComponent" frame11c>
+        <div class="placeholder">search anything....</div>
+        <input type="text" id="searchInput" />
+      </div>
+      <button flow class="searchShadow" frame11></button>
+      <div class="component-18 inputComponent" frame6c>
+        <div class="rectangle-23"></div>
+
+        <div class="icon user"></div>
+        <div class="username placeholder">username</div>
+
+        <input
+          type="text"
+          id="username"
+          data-onEnter="(_('*[rootScreen]').classList.value==='frame-6')?signUp():login()"
+        />
+      </div>
+
+      <div class="component-23 inputComponent" flow frame6c frame7c>
+        <div class="rectangle-23"></div>
+
+        <div class="icon mail">@</div>
+
+        <div class="email placeholder">email</div>
+        <input
+          type="email"
+          id="email"
+          data-onEnter="(_('*[rootScreen]').classList.value==='frame-6')?signUp():login()"
+        />
+      </div>
+
+      <div class="component-22 inputComponent" flow frame6c frame7c>
+        <div class="rectangle-212" flow></div>
+
+        <div class="icon key" flow></div>
+
+        <div class="change-your-password placeholder">password</div>
+        <input
+          type="password"
+          id="pass"
+          data-onEnter="(_('*[rootScreen]').classList.value==='frame-6')?signUp():login()"
+        />
+      </div>
+      <button class="component-24" flow frame6c onclick="signUp()">
+        <div class="rectangle-245"></div>
+
+        <div class="icon signup"></div>
+
+        <div class="sign-up">SignUp</div>
+      </button>
+      <button class="component-24" flow frame7c onclick="login()">
+        <div class="rectangle-245"></div>
+
+        <div class="icon signup"></div>
+
+        <div class="sign-up">Log in</div>
+      </button>
+
+      <button flow onclick="shiftFrame(5)" frame1 class="icon account-edit">
+        
+      </button>
+
+      <button flow frame1 frame5 onclick="signOut()" class="icon logout">
+        
+      </button>
+      <div class="sign-out" frame5>sign-out</div>
+
+      <button
+        accesskey="c"
+        flow
+        onclick="createServer()"
+        class="component-4"
+        frame1c
+        ng-show="!(isServer)"
+      >
+        <div class="rectangle-4"></div>
+
+        <div class="create-server"><u>C</u>reate Server</div>
+      </button>
+      <div class="component-99" flow frame2 frame3 frame4 frame1>
+        <div
+          class="component-8"
+          ng-show="isServer"
+          flow
+          frame3c
+          id="serverNameOutput"
+          ng-click="copy(serverName)"
+        >
+          <div class="rectangle-8"></div>
+
+          <div class="servername">{{disp(serverName,'server')}}</div>
+        </div>
+
+        <button
+          accesskey="s"
+          class="component-8"
+          frame1c
+          ng-show="isServer"
+          flow
+          frame4c
+          id="serverNameOutput"
+          onclick="shiftFrame(3)"
+        >
+          <div class="rectangle-8"></div>
+
+          <div class="servername">{{disp(serverName,'server')}}</div>
+        </button>
+      </div>
+      <div ng-show="isServer" frame1 frame3c>
+        <button
+          flow
+          onclick="ServUtil.stopServer(()=>{shiftFrame(1);  })"
+          class="component-311"
+          frame1
+          ng-show="isOwner"
+        >
+          <div class="rectangle-21" frame1></div>
+
+          <div class="icon stop" frame1></div>
+
+          <div class="terminate">stop</div>
+        </button>
+        <button
+          flow
+          onclick="ServUtil.exitServer(()=>{shiftFrame(1);  })"
+          class="component-312"
+          frame1
+          ng-show="isOwner"
+        >
+          <div class="rectangle-21" frame1></div>
+
+          <div class="icon exit" frame1></div>
+
+          <div class="terminate">exit</div>
+        </button>
+        <button
+          flow
+          onclick="ServUtil.stopServer(()=>{shiftFrame(1);  })"
+          class="component-31"
+          frame1
+          ng-show="!isOwner"
+        >
+          <div class="rectangle-21" frame1></div>
+
+          <div class="icon exit" frame1></div>
+
+          <div class="terminate">exit</div>
+        </button>
+      </div>
+      <div class="rectangle-9" noptrevt frame3 frame4 flow></div>
+      <div
+        class="rectangle-9"
+        noptrevt
+        frame2
+        frame9
+        ng-show="isQrScanning"
+        flow
+      ></div>
+      <div
+        class="icon qrcodebg"
+        flow
+        noptrevt
+        frame2
+        frame9
+        ng-show="isQrScanning"
+      >
+        
+      </div>
+      <div class="icon qrcodebg" flow noptrevt frame3></div>
+      <div
+        class="rectangle-7"
+        flow
+        noptrevt
+        frame3
+        style=" background: url(https://api.qrserver.com/v1/create-qr-code/?size=200&data=https://serverkrazy.web.app?server={{serverName}}&encoding=L) center center no-repeat;
+            background-size: contain;"
+      ></div>
+      <div
+        class="rectangle-7"
+        flow
+        frame4
+        noptrevt
+        style=" background: url(https://api.qrserver.com/v1/create-qr-code/?size=200&data={{serverName}}&encoding=L) center center no-repeat;
+            background-size: contain;"
+      ></div>
+      <div
+        class="rectangle-7"
+        flow
+        noptrevt
+        frame2c
+        frame9c
+        ng-show="isQrScanning"
+      >
+        <video id="preview" style="width: 100%; height: 100%"></video>
+      </div>
+
+      <button
+        accesskey="s"
+        class="component-9"
+        frame1c
+        ng-show="isServer"
+        flow
+        frame3c
+        ng-click="shareLink()"
+      >
+        <div class="ellipse-15"></div>
+
+        <div class="icon share"></div>
+      </button>
+
+      <button
+        flow
+        class="component-10"
+        frame1c
+        ng-show="isServer"
+        flow
+        frame3c
+        ng-click="copy('serverkrazy.web.app?server=',serverName)"
+      >
+        <div class="ellipse-15"></div>
+
+        <div class="icon copy"></div>
+      </button>
+
+      <button
+        accesskey="g"
+        flow
+        class="component-11"
+        onclick="shiftFrame(4)"
+        flow
+        frame3c
+        frame1c
+        ng-show="isServer"
+      >
+        <div class="ellipse-15"></div>
+
+        <div class="icon go"></div>
+      </button>
+
+      <button flow class="component-25" frame6c onclick="shiftFrame(7)">
+        <div class="rectangle-22"></div>
+
+        <div class="rectangle-21"></div>
+
+        <div class="texttosignup">log in</div>
+
+        <div class="already-have-an-account">already have an account?</div>
+
+        <div class="icon gotosignup"></div>
+      </button>
+      <button flow class="component-26" frame7c onclick="shiftFrame(6)">
+        <div class="rectangle-22"></div>
+
+        <div class="rectangle-21"></div>
+
+        <div class="texttosignup">sign up</div>
+
+        <div class="didnt-have-an-account">didn't have an account?</div>
+
+        <div class="icon gotosignup"></div>
+      </button>
+
+      <div class="component-28 inputComponent" frame2c>
+        <div class="rectangle-21"></div>
+
+        <div class="icon key"></div>
+
+        <div class="servername placeholder">servername</div>
+        <input type="text" id="serverNameInput" data-onEnter="jumpToServer()" />
+      </div>
+
+      <button
+        accesskey="j"
+        flow
+        onclick="shiftFrame(2)"
+        class="component-3"
+        frame1c
+        ng-show="!(isServer)"
+      >
+        <div class="rectangle-5"></div>
+
+        <div class="jump-to-server"><u>J</u>ump To Server</div>
+      </button>
+
+      <button
+        accesskey="j"
+        flow
+        onclick="jumpToServer()"
+        class="component-3"
+        frame2c
+        ng-show="!(isServer)"
+      >
+        <div class="rectangle-5"></div>
+
+        <div class="jump-to-server"><u>J</u>ump To Server</div>
+      </button>
+
+      <div
+        flow
+        class="rectangle-10"
+        frame4c
+        style="--height: {{ calculateHeightBg(typingmessage) }}px"
+      ></div>
+      <div
+        class="type-a-message inputComponent"
+        flow
+        frame4c
+        style="--height: {{ calculateHeightinputComp(typingmessage) }}px"
+        onclick="_('#Message').focus();"
+      >
+        <div class="placeholder" style="position: absolute">
+          <u>T</u>ype a message
+        </div>
+        <textarea
+          accesskey="t"
+          flow
+          id="Message"
+          ng-model="typingmessage"
+          data-onEnter="$('#send').click()"
+        ></textarea>
+      </div>
+
+      <div
+        class="component-38"
+        flow
+        frame4c
+        ng-show="emojiActive"
+        ng-init="emojisList=[['😁','😊','🤣','😂','❤️'],['🗿','💕','👍','👌','😘'],['😉','😯','🤐','😯','🥴'],['🤬','🥳','😈','☠️','👻']];classN =['component-34','component-36','component-37','component-35'];the_class=['component-18','component-19','component-22','component-20','component-21']"
+      >
+        <div class="ellipse-18"></div>
+
+        <div class="bgforemoji"></div>
+        <div ng-repeat=" index in [0,1,2,3]" class="{{classN[index]}}">
+          <div
+            ng-repeat=" jindex in [0,1,2,3,4]"
+            class="{{the_class[jindex]}}"
+            ng-click="addEmoji(emojisList[index][jindex]);"
+          >
+            <div class="ellipse-14"></div>
+            <div class="icon emoji">{{emojisList[index][jindex]}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="component-39" ng-show="fileOptActive" frame4c>
+        <div class="ellipse-182"></div>
+
+        <div class="bgforemoji"></div>
+
+        <div class="component-34">
+          <button
+            accesskey="l"
+            ng-click="fileOptActive=false;"
+            onclick
+            class="component-18"
+            flow
+            id="location"
+          >
+            <div class="ellipse-14"></div>
+
+            <div class="icon fileOpt"></div>
+          </button>
+
+          <button
+            accesskey="v"
+            ng-click="fileOptActive=false;"
+            onclick
+            class="component-19"
+            flow
+            id="contacts"
+          >
+            <div class="ellipse-14"></div>
+
+            <div class="icon fileOpt"></div>
+          </button>
+          <input
+            hidden
+            type="file"
+            multiple
+            maxlength="10"
+            name="docs"
+            id="docs"
+            oninput="handleFileInput(this)"
+          />
+          <input
+            hidden
+            type="file"
+            multiple
+            maxlength="10"
+            accept="image/*"
+            name="photos"
+            id="photos"
+            oninput="handleFileInput(this)"
+          />
+          <input
+            hidden
+            type="file"
+            multiple
+            maxlength="10"
+            accept="audio/*"
+            name="audio"
+            id="audio"
+            oninput="handleFileInput(this)"
+          />
+
+          <label
+            accesskey="o"
+            ng-click="fileOptActive=false;"
+            for="docs"
+            onclick
+            class="component-22"
+            flow
+            id="docs"
+          >
+            <div class="ellipse-14"></div>
+
+            <div class="icon fileOpt"></div>
+          </label>
+
+          <label
+            accesskey="i"
+            ng-click="fileOptActive=false;"
+            for="photos"
+            onclick
+            class="component-20"
+            flow
+            id="photos"
+          >
+            <div class="ellipse-14"></div>
+
+            <div class="icon fileOpt"></div>
+          </label>
+
+          <label
+            accesskey="a"
+            ng-click="fileOptActive=false;"
+            for="audio"
+            onclick
+            class="component-21"
+            flow
+            id="audio"
+          >
+            <div class="ellipse-14"></div>
+
+            <div class="icon fileOpt"></div>
+          </label>
+        </div>
+      </div>
+
+      <button
+        accesskey="m"
+        flow
+        class="component-15"
+        frame4c
+        ng-click="emojiActive=!emojiActive;fileOptActive=false;"
+      >
+        <div class="ellipse-142"></div>
+
+        <div class="icon emoji2"></div>
+      </button>
+      <button
+        accesskey="l"
+        flow
+        class="component-16"
+        frame4c
+        ng-click="fileOptActive=!fileOptActive;emojiActive=false;"
+      >
+        <div class="ellipse-15"></div>
+
+        <div class="icon attach"></div>
+      </button>
+      <button
+        flow
+        class="component-17"
+        id="send"
+        frame4c
+        ng-click="sendMessage()"
+      >
+        <div class="ellipse-13"></div>
+
+        <div class="icon send"></div>
+      </button>
+
+      <button flow class="component-18" frame5c>
+        <div class="rectangle-23"></div>
+
+        <div class="icon user"></div>
+
+        <div class="change-profile-picture">Change Profile Picture</div>
+      </button>
+      <button
+        flow
+        class="component-19"
+        frame5c
+        onclick="FB.linkFacebook()"
+        ng-show="!isProvider('facebook.com')"
+      >
+        <div class="rectangle-25"></div>
+
+        <div class="icon facebook"></div>
+
+        <div class="link-facebook-login">Link Facebook Login</div>
+      </button>
+      <button
+        flow
+        class="component-19"
+        frame5c
+        onclick="FB.unlink('facebook.com')"
+        ng-show="isProvider('facebook.com')"
+      >
+        <div class="rectangle-25"></div>
+
+        <div class="icon facebook"></div>
+
+        <div class="link-facebook-login">Unlink Facebook Login</div>
+      </button>
+      <button
+        flow
+        class="component-19"
+        frame6c
+        frame7c
+        onclick="FB.signinFacebook()"
+      >
+        <div class="rectangle-25"></div>
+
+        <div class="facebook"></div>
+
+        <div class="link-facebook-login">Continue with Facebook</div>
+      </button>
+
+      <button
+        flow
+        class="component-20"
+        frame5c
+        onclick="FB.linkGoogle()"
+        ng-show="!isProvider('google.com')"
+      >
+        <div class="rectangle-24"></div>
+
+        <div class="icon google"></div>
+
+        <div class="link-google-login">Link Google Login</div>
+      </button>
+      <button
+        flow
+        class="component-20"
+        frame5c
+        onclick="FB.unlink('google.com')"
+        ng-show="isProvider('google.com')"
+      >
+        <div class="rectangle-24"></div>
+
+        <div class="icon google"></div>
+
+        <div class="link-google-login">Unlink Google Login</div>
+      </button>
+      <button
+        onclick="FB.signinGoogle()"
+        flow
+        class="component-20"
+        frame6c
+        frame7c
+      >
+        <div class="rectangle-24"></div>
+
+        <div class="google"></div>
+
+        <div class="link-google-login">Continue with Google</div>
+      </button>
+
+      <button
+        onclick="if(confirm('do you really want to delete your account?'))deleteAcc();"
+        flow
+        class="component-21"
+        frame5c
+      >
+        <div class="rectangle-22"></div>
+
+        <div class="icon tr-ash"></div>
+
+        <div class="delete-your-account">Delete your Account</div>
+      </button>
+      <div class="component-40" frame10c>
+        <div class="rectangle-26"></div>
+
+        <div class="rectangle-27">Set the representation for date</div>
+
+        <button
+          flow
+          ng-click="settings.dateStyle=3;updateSettings();"
+          class="option1st {{settings.dateStyle==3?'active':'not'}}"
+        >
+          2012/12/31
+        </button>
+        <button
+          flow
+          ng-click="settings.dateStyle=1;updateSettings();"
+          class="option2nd {{settings.dateStyle==2?'active':'not'}}"
+        >
+          31/12/2012
+        </button>
+
+        <button
+          flow
+          ng-click="settings.dateStyle=2;updateSettings();"
+          class="option3rd {{settings.dateStyle==1?'active':'not'}}"
+        >
+          12/31/2012
+        </button>
+      </div>
+      <div class="component-42" frame10c>
+        <div class="rectangle-26"></div>
+
+        <div class="rectangle-27">set the representation of Month</div>
+
+        <button
+          flow
+          ng-click="settings.monthStyle='num';updateSettings();"
+          class="option1st {{settings.monthStyle=='num'?'active':'not'}}"
+        >
+          7
+        </button>
+
+        <button
+          flow
+          ng-click="settings.monthStyle='small';updateSettings();"
+          class="option2nd {{settings.monthStyle=='small'?'active':'not'}}"
+        >
+          Aug
+        </button>
+        <button
+          flow
+          ng-click="settings.monthStyle='large';updateSettings();"
+          class="option3rd {{settings.monthStyle=='large'?'active':'not'}}"
+        >
+          August
+        </button>
+      </div>
+      <div class="component-41" frame10c>
+        <div class="rectangle-31"></div>
+
+        <div class="rectangle-27">Set the style of time you prefer</div>
+
+        <button
+          flow
+          ng-click="settings.timeStyle=12; updateSettings();"
+          class="rectangle-33 {{settings.timeStyle==12?'active':'not'}}"
+        >
+          7:56pm
+        </button>
+
+        <button
+          flow
+          ng-click="settings.timeStyle=24; updateSettings();"
+          class="rectangle-35 {{settings.timeStyle==24?'active':'not'}}"
+        >
+          21:56
+        </button>
+      </div>
+      <div class="component-43" frame10c>
+        <div class="rectangle-31"></div>
+
+        <div class="rectangle-27">set the seperator for Date</div>
+
+        <button
+          flow
+          ng-click="settings.dtseperator='/'; updateSettings();"
+          class="rectangle-33 {{settings.dtseperator=='/'?'active':'not'}}"
+        >
+          1/2/2006
+        </button>
+
+        <button
+          flow
+          ng-click="settings.dtseperator='-' ;updateSettings();"
+          class="rectangle-35 {{settings.dtseperator=='-'?'active':'not'}}"
+        >
+          1-2-2006
+        </button>
+      </div>
+      <div class="component-45" frame10c>
+        <div class="rectangle-332 active" flow>Date & Time</div>
+
+        <div class="rectangle-34" flow></div>
+
+        <div class="rectangle-352" flow></div>
+
+        <div class="rectangle-37" flow></div>
+
+        <div class="rectangle-36" flow></div>
+
+        <button onclick="shiftFrame(11)" class="component-44" flow>
+          <div class="rectangle-39"></div>
+
+          <div class="icon search2"></div>
+        </button>
+      </div>
+
+      <div frame5 fade ng-show="user.metadata.a" class="last-signed-in">
+        Last signed in
+      </div>
+      <div frame5 fade ng-show="user.metadata.b" class="account-created-at">
+        Account created at
+      </div>
+      <div
+        frame5c
+        fade
+        ng-show="user.metadata.a"
+        class="timea"
+        timeid="{{user.metadata.a}}"
+      ></div>
+      <div
+        frame5c
+        fade
+        ng-show="user.metadata.b"
+        class="timeb"
+        timeid="{{user.metadata.b}}"
+      ></div>
+
+      <button onclick="shiftFrame(8)" class="component-22" frame5c flow>
+        <div class="rectangle-21"></div>
+
+        <div class="icon key"></div>
+
+        <div class="change-your-password">Change your password</div>
+      </button>
+
+      <div class="component-22" frame8c>
+        <div class="rectangle-21" fade></div>
+        <div class="change-your-password" flow>Change your password</div>
+
+        <div class="icon key" flow></div>
+
+        <div ng-show="!isCredential">
+          <div
+            class="component-29 inputComponent"
+            ng-show="isProvider('password')"
+          >
+            <div class="or">or</div>
+
+            <div class="rectangle-22"></div>
+
+            <div class="current-password placeholder">current password</div>
+            <input type="password" id="currentPass" />
+
+            <div class="icon passico2"></div>
+          </div>
+          <button
+            flow
+            id="reAuthgoogle"
+            onclick="FB.reAuthGoogle(()=>{changePassword()})"
+            ng-show="isProvider('google.com')"
+            class="component-32"
+          >
+            <div class="rectangle-222"></div>
+
+            <div class="icon googleico"></div>
+
+            <div class="google-co">re login with Google</div>
+          </button>
+
+          <button
+            flow
+            id="reAuthfacebook"
+            onclick="FB.reAuthFacebook(()=>{changePassword()})"
+            ng-show="isProvider('facebook.com')"
+            class="component-33"
+          >
+            <div class="rectangle-222"></div>
+
+            <div class="icon fbico"></div>
+
+            <div class="fb-co">re login with facebook</div>
+          </button>
+        </div>
+
+        <div class="component-30 inputComponent">
+          <div class="rectangle-23"></div>
+
+          <div class="new-password placeholder">new password</div>
+
+          <div class="icon passico"></div>
+          <input type="password" id="newPass" data-onEnter="changePassword()" />
+        </div>
+      </div>
+
+      <button flow class="component-27" frame8c onclick="changePassword()">
+        <div class="rectangle-25"></div>
+
+        <div class="change">Change</div>
+
+        <div class="icon gotosignup"></div>
+      </button>
+    </div>
+  </body>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins");
+    @import url("https://fonts.googleapis.com/css2?family=Fira%20Code");
+    @import url("https://use.fontawesome.com/releases/v6.1.0/css/all.css");
+
+    .icon {
+      font-weight: 900 !important;
+      font-family: "Font Awesome 6 Free";
+    }
+
+    button {
+      outline: none;
+      border: none;
+      background: none;
+    }
+
+    button:not(.btnDum):hover,
+    button:not(.btnDum):focus,
+    label:hover,
+    label:focus,
+    .btnDum:focus .partDum,
+    .btnDum:hover .partDum {
+      transform: translateY(-5px);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    column {
+      display: flex !important;
+      flex-direction: column;
+    }
+
+    row {
+      display: flex !important;
+      flex-direction: row;
+    }
+
+    body[loading] .loader {
+      display: flex;
+    }
+
+    @keyframes bounce {
+      100% {
+        background: #fff6;
+        transform: translateY(-2em);
+      }
+    }
+
+    .loader {
+      opacity: 1 !important;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 99999999999999999;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(2px) brightness(0.8) grayscale(0.2);
+    }
+
+    .loader div {
+      opacity: 1 !important;
+      width: 2em;
+      height: 2em;
+      margin: 1em 0.5em;
+      background: #fff;
+      border-radius: 50%;
+      -webkit-animation: 0.9s bounce infinite alternate;
+      animation: 0.9s bounce infinite alternate;
+      opacity: 1;
+      backdrop-filter: blur(5px);
+      border: 1px solid #fff;
+    }
+
+    .loader div:nth-child(2) {
+      -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s;
+    }
+
+    .loader div:nth-child(3) {
+      -webkit-animation-delay: 0.6s;
+      animation-delay: 0.6s;
+    }
+
+    body[loading] {
+      pointer-events: none;
+    }
+
+    body[loading] * {
+      pointer-events: none !important;
+    }
+
+    *[rootScreen] {
+      opacity: 1;
+      pointer-events: all;
+      display: unset;
+      width: 360px;
+      height: 640px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    *[noselect] {
+      user-select: none !important;
+    }
+
+    *[noptrevt],
+    *[noptrevt] * {
+      user-select: none !important;
+      pointer-events: none !important;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    *[flow] {
+      transition: all 1s ease;
+    }
+
+    *[fade] {
+      transition: opacity 1s ease;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+    }
+
+    body * {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .inputComponent input {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 0 0 0 45px;
+      background: none;
+      border: none;
+      outline: none;
+      color: #fff;
+    }
+
+    #Message ::-webkit-scrollbar {
+      display: none;
+    }
+
+    #Message {
+      padding: 0 0 0 20px;
+      height: 100%;
+      background: none;
+      border: none;
+      resize: none;
+      font: 13px "Poppins";
+      color: #fff;
+      width: 100%;
+      border: none;
+      outline: none;
+    }
+
+    .inputComponent:focus-within .placeholder,
+    .inputComponent.valid .placeholder {
+      opacity: 0;
+    }
+
+    input[hidden] {
+      display: none !important;
+    }
+
+    .frame-1 *[frame1c],
+    .frame-1 *[frame1c] *,
+    .frame-1 *[allc],
+    .frame-1 *[allc] *,
+    .frame-1 *[frame1],
+    .frame-1 *[all] {
+      pointer-events: all;
+      opacity: 1;
+      display: unset;
+    }
+
+    .frame-10 *[frame10c],
+    .frame-10 *[frame10c] *,
+    .frame-10 *[allc],
+    .frame-10 *[allc] *,
+    .frame-10 *[frame10],
+    .frame-10 *[all] {
+      pointer-events: all;
+      opacity: 1;
+      display: unset;
+    }
+
+    .frame-11 *[frame11c],
+    .frame-11 *[frame11c] *,
+    .frame-11 *[allc],
+    .frame-11 *[allc] *,
+    .frame-11 *[frame11],
+    .frame-11 *[all] {
+      pointer-events: all;
+      opacity: 1;
+      display: unset;
+    }
+
+    .frame-2 *[frame2c],
+    .frame-2 *[frame2c] *,
+    .frame-2 *[allc],
+    .frame-2 *[allc] *,
+    .frame-2 *[frame2],
+    .frame-2 *[all] {
+      pointer-events: all;
+      opacity: 1;
+      display: unset;
+    }
+
+    .frame-3 *[frame3c],
+    .frame-3 *[frame3c] *,
+    .frame-3 *[allc],
+    .frame-3 *[allc] *,
+    .frame-3 *[frame3],
+    .frame-3 *[all] {
+      pointer-events: all;
+      opacity: 1;
+      display: unset;
+    }
+
+    .frame-4 *[frame4c],
+    .frame-4 *[frame4c] *,
+    .frame-4 *[allc],
+    .frame-4 *[allc] *,
+    .frame-4 *[frame4],
+    .frame-4 *[all] {
+      pointer-events: all;
+      opacity: 1;
+      display: unset;
+    }
+
+    .frame-5 *[frame5c],
+    .frame-5 *[frame5c] *,
+    .frame-5 *[allc],
+    .frame-5 *[allc] *,
+    .frame-5 *[frame5],
+    .frame-5 *[all] {
+      pointer-events: all;
+      opacity: 1;
+      display: unset;
+    }
+
+    .frame-6 *[frame6c],
+    .frame-6 *[frame6c] *,
+    .frame-6 *[allc],
+    .frame-6 *[allc] *,
+    .frame-6 *[frame6],
+    .frame-6 *[all] {
+      pointer-events: all;
+      opacity: 1;
+      display: unset;
+    }
+
+    .frame-7 *[frame7c],
+    .frame-7 *[frame7c] *,
+    .frame-7 *[allc],
+    .frame-7 *[allc] *,
+    .frame-7 *[frame7],
+    .frame-7 *[all] {
+      pointer-events: all;
+      opacity: 1;
+      display: unset;
+    }
+
+    .frame-8 *[frame8c],
+    .frame-8 *[frame8c] *,
+    .frame-8 *[allc],
+    .frame-8 *[allc] *,
+    .frame-8 *[frame8],
+    .frame-8 *[all] {
+      pointer-events: all;
+      opacity: 1;
+      display: unset;
+    }
+
+    .frame-9 *[frame9c],
+    .frame-9 *[frame9c] *,
+    .frame-9 *[allc],
+    .frame-9 *[allc] *,
+    .frame-9 *[frame9],
+    .frame-9 *[all] {
+      pointer-events: all;
+      opacity: 1;
+      display: unset;
+    }
+
+    *[contenteditable].focused {
+      box-shadow: 0 0 20px #fff;
+      border: none;
+      outline: none;
+    }
+
+    *[contenteditable] {
+      caret-shape: underscore;
+      font-family: "Poppins";
+      text-align: center;
+      align-items: center;
+      display: flex !important;
+      justify-content: center;
+      align-content: center;
+      vertical-align: middle;
+      font-size: 25px;
+    }
+
+    input {
+      font: 15px "Poppins";
+    }
+
+    *[text] {
+      font-family: "Poppins";
+      text-align: center;
+      align-items: center;
+      display: flex !important;
+      justify-content: center;
+      align-content: center;
+      vertical-align: middle;
+      font-size: 25px;
+    }
+  </style>
+
+  <style>
+    .timea {
+      color: #ffffff;
+      text-align: left;
+      font: 400 12px "Fira Code", sans-serif;
+      position: absolute;
+      left: 189px;
+      top: 581px;
+    }
+
+    .timeb {
+      color: #ffffff;
+      text-align: left;
+      font: 400 12px "Fira Code", sans-serif;
+      position: absolute;
+      left: 189px;
+      top: 597px;
+    }
+
+    .last-signed-in {
+      color: #ffffff;
+      text-align: left;
+      font: 400 12px "Fira Code", sans-serif;
+      position: absolute;
+      left: 53px;
+      top: 581px;
+    }
+
+    .account-created-at {
+      color: #ffffff;
+      text-align: left;
+      font: 400 12px "Fira Code", sans-serif;
+      position: absolute;
+      left: 53px;
+      top: 597px;
+    }
+
+    .msgbucket {
+      width: 333px;
+      height: 470px;
+      position: absolute;
+      left: 12px;
+      top: 156px;
+      overflow: hidden;
+      overflow-y: auto;
+    }
+
+    .message:last-child {
+      margin-bottom: 60px;
+    }
+
+    .msgbucket::-webkit-scrollbar {
+      display: none;
+    }
+
+    .message:has(.me) {
+      flex-direction: row;
+    }
+
+    .holdingDiv .qrlink,
+    .holdingDiv .link,
+    .holdingDiv .download,
+    .holdingDiv .copy,
+    .holdingDiv .closeAction {
+      font: 14px "Font Awesome 6 Free";
+      font-weight: 900;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .message .actions {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-evenly;
+    }
+
+    .message.action .actions {
+      display: flex;
+      flex-direction: column;
+      justify-items: flex-end;
+
+      pointer-events: none;
+      width: 32px;
+      height: 100%;
+      justify-content: space-evenly;
+      padding: 5px;
+      background: #fff1;
+      border-radius: 2em;
+      backdrop-filter: blur(1em);
+      align-content: center;
+      align-items: center;
+    }
+    .message.action .more {
+      display: none;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .message.action .actions *:not(.more):not(.closeAction) {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .message .actions *:not(.more):not(.closeAction) {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .message .actions .closeAction {
+      display: none;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .message.action .actions .closeAction {
+      display: flex;
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .message.action .actions *:hover {
+      background: #000;
+      color: #d98844;
+    }
+
+    .holdingDiv .textCont {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .holdingDiv.me .msgcopy.copy {
+      right: unset;
+    }
+
+    .holdingDiv .msgcopy.copy {
+      position: absolute;
+      right: 1em;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .holdingDiv:hover .copy {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .message {
+      display: flex !important;
+      color: #fff;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      margin: 5px 0;
+      transition: all 1s ease;
+    }
+
+    .messageInfoDiv {
+      display: flex !important;
+      flex-direction: column;
+    }
+
+    @keyframes slideLeft {
+      0% {
+        opacity: 1;
+      }
+
+      20% {
+        transform: translateX(10%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideRight {
+      0% {
+        opacity: 1;
+      }
+
+      20% {
+        transform: translateX(-10%);
+      }
+
+      100% {
+        transform: translateX(100%);
+
+        opacity: 1;
+      }
+    }
+
+    .iconround {
+      font: 20px "Font Awesome 6 Free";
+    }
+
+    .message.deleted .ProfileOfSender,
+    .message.deleted .copy,
+    .message.deleted .file,
+    .message.deleted .fileName,
+    .message.deleted .actions {
+      display: none;
+    }
+
+    .message.deleted {
+      display: none;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
+      animation: slideLeft 2s ease-in-out;
+    }
+
+    .message.deleted:has(.me) {
+      animation: slideRight 2s ease-in-out;
+    }
+
+    .holdingDiv {
+      display: inline-flex !important;
+      flex-direction: row-reverse;
+      border-radius: 1em;
+      backdrop-filter: blur(1rem);
+      padding: 4px 10px 4px 4px;
+      background: #fff3;
+    }
+
+    .holdingDiv.me {
+      backdrop-filter: none;
+      background: none;
+      border: none;
+      padding: 0;
+      flex-direction: row;
+    }
+
+    .holdingDiv.me .messageInfoDiv {
+      background: #fff1;
+      padding: 0.2em 0.4em 0.3em 0.4em;
+      border-radius: 1em;
+      backdrop-filter: blur(7px);
+      border: 1px solid #fff;
+    }
+
+    .message.deleted .text::before {
+      content: "this message is deleted";
+      font-style: italic;
+      font: 10px "Fira Code", sans-serif;
+    }
+
+    .holdingDiv .progText {
+      font: 17px "Poppins", sans-serif;
+    }
+
+    .holdingDiv .progress {
+      display: flex;
+      width: 100%;
+      height: 5px;
+      background: #000;
+      overflow: hidden;
+      border-radius: 5px;
+    }
+
+    .holdingDiv .progBar {
+      display: flex !important;
+      background: #fff;
+      width: var(--i);
+      height: 100%;
+    }
+
+    .holdingDiv.me .file {
+      align-items: flex-end;
+    }
+
+    .holdingDiv .file {
+      display: flex;
+      flex-direction: row;
+      width: min-content;
+      align-items: center;
+      text-overflow: ellipsis;
+      align-self: flex-end;
+      justify-content: space-evenly;
+      align-content: center;
+    }
+
+    .holdingDiv .file img {
+      border-radius: 10px;
+      width: 150px;
+      height: 150px;
+    }
+
+    .holdingDiv .file .audioPlayer .rangeInput {
+      position: absolute;
+      height: inherit;
+      width: inherit;
+      opacity: 0;
+    }
+
+    .holdingDiv .file .audioPlayer {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .holdingDiv .audioPlayer .actionCont {
+      display: flex;
+    }
+
+    .holdingDiv .audioPlayer .progress {
+      height: 30px;
+      width: 115px;
+      border-radius: 12px;
+    }
+
+    .holdingDiv .audioPlayer .timeCont {
+      height: 10px;
+      font: 10px "Poppins";
+      padding: 0 0 0 40px;
+    }
+
+    .holdingDiv .file .audioPlayer .playpause.play:before {
+      content: "";
+    }
+
+    .holdingDiv .file .audioPlayer .playpause:before {
+      content: "";
+    }
+
+    .holdingDiv .file .audioPlayer .playpause {
+      border-radius: 15px;
+      width: 30px;
+      font: 20px "Font Awesome 6 Free";
+      height: 30px;
+      background: #fff;
+      color: #000;
+    }
+
+    .holdingDiv .fileName {
+      font: 10px "Poppins", sans-serif;
+      color: #fff;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 100%;
+      text-align: right;
+    }
+
+    .holdingDiv .text {
+      max-width: 216px;
+      align-self: flex-start;
+      font: 17px "Poppins", sans-serif;
+      overflow-wrap: break-word;
+      text-overflow: ellipsis;
+    }
+
+    .holdingDiv.me .text {
+      align-self: flex-end;
+    }
+
+    .holdingDiv .time {
+      font: 11px "Fira Code", sans-serif;
+    }
+
+    .message .sender {
+      display: none;
+      font: 7px "Fira Code", sans-serif;
+    }
+
+    .message .deleteBtn:hover,
+    .message .deleteBtn:focus {
+      color: #f33;
+    }
+
+    .message:hover .deleteBtn,
+    .deleteBtn:focus {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .message .deleteBtn {
+      font-size: 25px;
+      color: #fff;
+      transition: all 1s ease;
+      margin: 5px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .message .ProfileOfSender {
+      width: 30px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .message .ProfileOfSender:has(.more) {
+      justify-content: space-between;
+    }
+
+    .message .more {
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .message .senderPhoto {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      background: #fff1;
+      backdrop-filter: blur(1em);
+    }
+
+    .holdingDiv.me .senderName,
+    .holdingDiv.me .time {
+      align-self: flex-end;
+    }
+
+    .message .senderName {
+      font: 13px "Fira Code", sans-serif;
+    }
+
+    .rectangle-2 {
+      background: #000000;
+      border-radius: 19px;
+      width: 360px;
+      height: 630px;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+    }
+
+    .component-7 {
+      width: 303px;
+      height: 514px;
+      position: absolute;
+      left: 27px;
+      top: 97px;
+    }
+
+    /*ellipse code start*/
+    .ellipse-3 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 75px;
+      height: 75px;
+      position: absolute;
+      left: 228px;
+      top: 201px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .ellipse-4 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      left: 49px;
+      top: 354px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .ellipse-5 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      position: absolute;
+      left: 122px;
+      top: 0px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .ellipse-7 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 33px;
+      height: 31px;
+      position: absolute;
+      left: 162px;
+      top: 306px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .ellipse-8 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      left: 191px;
+      top: 78px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .ellipse-12 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 242px;
+      top: 8px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .ellipse-2 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 0px;
+      top: 155px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .ellipse-6 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 31px;
+      height: 31px;
+      position: absolute;
+      left: 40px;
+      top: 263px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .ellipse-9 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 113px;
+      top: 474px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .ellipse-11 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      position: absolute;
+      left: 166px;
+      top: 389px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .ellipse-10 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      left: 103px;
+      top: 418px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-3 .ellipse-3 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 136px;
+      height: 136px;
+      position: absolute;
+      left: 167px;
+      top: 64px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-3 .ellipse-6 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 31px;
+      height: 31px;
+      position: absolute;
+      left: 10px;
+      top: 494px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-3 .ellipse-4 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      left: 86px;
+      top: 397px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-3 .ellipse-5 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      position: absolute;
+      left: 60px;
+      top: 303px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-3 .ellipse-8 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: -7px;
+      top: 125px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-3 .ellipse-12 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 293px;
+      top: 8px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-3 .ellipse-2 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: -7px;
+      top: 8px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-3 .ellipse-7 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 110px;
+      height: 110px;
+      position: absolute;
+      left: 167px;
+      top: 294px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-3 .ellipse-9 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 121px;
+      top: 479px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-3 .ellipse-11 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      position: absolute;
+      left: 254px;
+      top: 427px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-3 .ellipse-10 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      left: 53px;
+      top: 461px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-2 .ellipse-4 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 125px;
+      height: 125px;
+      position: absolute;
+      left: 9px;
+      top: 72px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-2 .ellipse-7 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 63px;
+      height: 63px;
+      position: absolute;
+      left: 182px;
+      top: 255px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-2 .ellipse-8 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      left: 191px;
+      top: 78px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-2 .ellipse-5 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      position: absolute;
+      left: 271px;
+      top: -28px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-2 .ellipse-12 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      left: 252px;
+      top: 46px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-2 .ellipse-6 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 31px;
+      height: 31px;
+      position: absolute;
+      left: 31px;
+      top: 317px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-2 .ellipse-9 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 49px;
+      top: 494px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-2 .ellipse-11 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 157px;
+      top: 437px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-2 .ellipse-10 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      left: 103px;
+      top: 418px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-2 .ellipse-3 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 241px;
+      top: 487px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-2 .ellipse-2 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 172px;
+      top: 359px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-8 .ellipse-3 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 108px;
+      top: 350px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-8 .ellipse-4 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      left: 150px;
+      top: 389px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-8 .ellipse-5 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 75px;
+      height: 75px;
+      position: absolute;
+      left: 145px;
+      top: 160px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-8 .ellipse-7 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 33px;
+      height: 31px;
+      position: absolute;
+      left: 179px;
+      top: 308px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-8 .ellipse-8 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      left: 95px;
+      top: 246px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-8 .ellipse-12 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 253px;
+      top: 100px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-8 .ellipse-2 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      left: 64px;
+      top: 201px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-8 .ellipse-6 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 31px;
+      height: 31px;
+      position: absolute;
+      left: 92px;
+      top: 277px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-8 .ellipse-11 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 170px;
+      top: 452px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-8 .ellipse-9 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      left: 90px;
+      top: 452px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-8 .ellipse-10 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      left: 64px;
+      top: 404px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-6 .component-7 {
+      width: 303px;
+      height: 514px;
+      position: absolute;
+      left: 30px;
+      top: 82px;
+    }
+
+    .frame-6 .ellipse-9 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 76px;
+      top: 499px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-6 .ellipse-3 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 95px;
+      top: 241px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-6 .ellipse-4 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 168px;
+      top: 382px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-6 .ellipse-5 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      position: absolute;
+      left: 163px;
+      top: 117px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-6 .ellipse-7 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 95px;
+      top: 335px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-6 .ellipse-8 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: -6px;
+      top: 140px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-6 .ellipse-12 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 75px;
+      height: 75px;
+      position: absolute;
+      left: 68px;
+      top: 7px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-6 .ellipse-2 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 210px;
+      top: 180px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-6 .ellipse-6 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 31px;
+      height: 31px;
+      position: absolute;
+      left: 188px;
+      top: 287px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-6 .ellipse-11 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      left: 170px;
+      top: 470px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-6 .ellipse-10 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 75px;
+      top: 423px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-7 .ellipse-3 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 152px;
+      top: 263px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-7 .ellipse-4 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 218px;
+      top: 364px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-7 .ellipse-5 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      left: 56px;
+      top: 66px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-7 .ellipse-7 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 33px;
+      height: 31px;
+      position: absolute;
+      left: 238px;
+      top: 324px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-7 .ellipse-8 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 145px;
+      top: 126px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-7 .ellipse-12 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 228px;
+      top: 88px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-7 .ellipse-2 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 66px;
+      top: 176px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-7 .ellipse-6 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 31px;
+      height: 31px;
+      position: absolute;
+      left: 101px;
+      top: 232px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-7 .ellipse-9 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 56px;
+      top: 444px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-7 .ellipse-11 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 46px;
+      top: 374px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    .frame-7 .ellipse-10 {
+      background: #d98344;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 165px;
+      top: 404px;
+      box-shadow: 0px 0px 25px 10px rgba(217, 131, 68, 0.25);
+      filter: blur(1px);
+    }
+
+    /*ellipses end*/
+    .rectangle-1 {
+      background: #505050;
+      border-radius: 14px;
+      width: 360px;
+      height: 57px;
+      position: absolute;
+      left: calc(50% - 180px);
+      top: 10px;
+      backdrop-filter: blur(2px);
+    }
+
+    .server-krazy {
+      color: #ffffff;
+      text-align: left;
+      font: 30px "Fira Code", sans-serif;
+      position: absolute;
+      left: 9px;
+      top: 23px;
+      width: 200px;
+      height: 30px;
+    }
+
+    .component-1 {
+      width: 99px;
+      height: 27px;
+      position: absolute;
+      left: 250px;
+      top: 27px;
+    }
+
+    .threedots {
+      color: #ffffff;
+      text-align: center;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 77px;
+      top: 0px;
+      width: 22px;
+      height: 27px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search {
+      color: #ffffff;
+      text-align: center;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 38px;
+      top: 0px;
+      width: 22px;
+      height: 27px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gear {
+      color: #ffffff;
+      text-align: center;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 22px;
+      height: 27px;
+      align-items: center;
+      justify-content: center;
+    }
+    /*
+    .component-6 {}*/
+
+    .rectangle-7,
+    .rectangle-9 {
+      background: rgba(128, 128, 128, 0.47);
+      border-radius: 20px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 0.5px;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: calc(50% - 50px);
+      top: 505px;
+      backdrop-filter: blur(2px);
+    }
+
+    .rectangle-7 {
+      width: 75px;
+      height: 75px;
+      border: none;
+      left: calc(50% - 35px);
+      top: 516px;
+    }
+
+    .qrcodebg {
+      color: #ffffff;
+      text-align: center;
+      font: 50px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: calc(50% - 22px);
+      top: 528px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .component-2 {
+      width: 228px;
+      height: 152px;
+      position: absolute;
+      left: 44px;
+      top: 125px;
+    }
+
+    .rectangle-3 {
+      background: rgba(128, 128, 128, 0.47);
+      border-radius: 36px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 0.5px;
+      width: 245px;
+      height: 171.44px;
+      position: absolute;
+      left: -17px;
+      top: -9.72px;
+      backdrop-filter: blur(2px);
+    }
+
+    .ellipse-1 {
+      position: absolute;
+      left: 140px;
+      top: -44px;
+      overflow: hidden;
+      border-radius: 50%;
+      background: #fff4;
+      backdrop-filter: blur(3px);
+    }
+
+    .hi {
+      color: #ffff44;
+      text-align: left;
+      font: 44px "Fira Code", sans-serif;
+      position: absolute;
+      left: 3px;
+      top: 0px;
+      width: 88px;
+      height: 41.53px;
+    }
+
+    ._user {
+      color: #ffffff;
+      text-align: left;
+      font: 44px "Poppins", sans-serif;
+      position: absolute;
+      left: 0px;
+      top: 59.21px;
+      width: 228px;
+      height: 86.6px;
+    }
+
+    .account-edit {
+      color: #ffffff;
+      text-align: center;
+      font: 30px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 154px;
+      top: 233px;
+      width: 50px;
+      height: 44.19px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logout {
+      color: #ffffff;
+      text-align: center;
+      font: 30px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 211px;
+      top: 233px;
+      width: 50px;
+      height: 44.19px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .component-40 {
+      width: 322px;
+      height: 85px;
+      position: absolute;
+      left: 20px;
+      top: 125px;
+    }
+
+    .rectangle-26 {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 15px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 1px;
+      width: 322px;
+      height: 85px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(5px);
+    }
+
+    .rectangle-27 {
+      border-radius: 15px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 1px;
+      width: auto;
+      height: 27px;
+      position: absolute;
+      left: 12px;
+      top: 15px;
+      font: 13px "Poppins";
+      display: flex !important;
+      color: #fff;
+      padding: 0 1em;
+      align-items: center;
+      justify-content: flex-start;
+      align-content: center;
+      backdrop-filter: blur(1rem);
+    }
+
+    .option2nd {
+      border-radius: 15px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 1px;
+      width: 74px;
+      height: 27px;
+      position: absolute;
+      left: 154px;
+      top: 50px;
+      font: 10px "Poppins";
+      backdrop-filter: blur(1rem);
+      color: #fff;
+    }
+
+    .option1st {
+      border-radius: 15px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 1px;
+      width: 74px;
+      height: 27px;
+      position: absolute;
+      left: 75px;
+      top: 50px;
+      font: 10px "Poppins";
+      backdrop-filter: blur(1rem);
+      color: #fff;
+    }
+
+    .option3rd {
+      border-radius: 15px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 1px;
+      width: 74px;
+      height: 27px;
+      position: absolute;
+      left: 233px;
+      top: 50px;
+      font: 10px "Poppins";
+      backdrop-filter: blur(1rem);
+      color: #fff;
+    }
+
+    .component-42 {
+      width: 322px;
+      height: 85px;
+      position: absolute;
+      left: 19px;
+      top: 335px;
+    }
+
+    .component-41 {
+      width: 322px;
+      height: 85px;
+      position: absolute;
+      left: 19px;
+      top: 230px;
+    }
+
+    .rectangle-31 {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 15px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 1px;
+      width: 322px;
+      height: 85px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(5px);
+    }
+
+    .rectangle-33 {
+      border-radius: 15px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 1px;
+      width: 74px;
+      height: 27px;
+      position: absolute;
+      left: 154px;
+      top: 50px;
+      color: #fff;
+      font: 10px "Poppins";
+    }
+
+    .rectangle-35 {
+      border-radius: 15px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 1px;
+      width: 74px;
+      height: 27px;
+      position: absolute;
+      left: 233px;
+      top: 50px;
+      color: #fff;
+      font: 10px "Poppins";
+    }
+
+    .component-43 {
+      width: 322px;
+      height: 85px;
+      position: absolute;
+      left: 20px;
+      top: 440px;
+    }
+
+    .component-45 {
+      width: 239px;
+      height: 61px;
+      position: absolute;
+      left: calc(50% - 119px);
+      top: 545px;
+    }
+
+    .rectangle-332 {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 15px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 1px;
+      width: 74px;
+      height: 27px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(5px);
+      color: #fff;
+      font: 10px "Poppins";
+      display: flex !important;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+    }
+
+    .rectangle-34 {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 15px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 1px;
+      width: 74px;
+      height: 27px;
+      position: absolute;
+      left: 83px;
+      top: 0px;
+      backdrop-filter: blur(5px);
+      color: #fff;
+      font: 10px "Poppins";
+      display: flex !important;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+    }
+
+    .rectangle-352 {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 15px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 1px;
+      width: 93px;
+      height: 27px;
+      position: absolute;
+      left: 35px;
+      top: 34px;
+      backdrop-filter: blur(5px);
+      color: #fff;
+      display: flex !important;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      font: 10px "Poppins";
+    }
+
+    .rectangle-37 {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 15px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 1px;
+      width: 107px;
+      height: 27px;
+      position: absolute;
+      left: 132px;
+      top: 34px;
+      display: flex !important;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      backdrop-filter: blur(5px);
+      color: #fff;
+      font: 10px "Poppins";
+    }
+
+    .rectangle-36 {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 15px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 1px;
+      width: 74px;
+      height: 27px;
+      position: absolute;
+      left: 165px;
+      top: 0px;
+      backdrop-filter: blur(5px);
+      color: #fff;
+      font: 10px "Poppins";
+      display: flex !important;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+    }
+
+    .component-44 {
+      width: 28px;
+      height: 27px;
+      position: absolute;
+      left: 0px;
+      top: 34px;
+    }
+
+    .rectangle-39 {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 15px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 1px;
+      width: 28px;
+      height: 27px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(5px);
+    }
+
+    .search2 {
+      color: #ffffff;
+      text-align: center;
+      font: 12px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 3px;
+      top: 0px;
+      width: 22px;
+      height: 27px;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-1 .component-311,
+    .frame-1 .component-31 {
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      left: 65px;
+      top: 455px;
+    }
+
+    .frame-1 .component-312 {
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      left: 65px;
+      top: 383px;
+    }
+
+    .frame-1 .rectangle-21 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-1 .stop:not(:hover) {
+      animation: fadeOut 1s infinite ease-in-out alternate;
+    }
+
+    .frame-1 .exit,
+    .frame-1 .stop {
+      color: #ff3333;
+      text-align: center;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 0px;
+      top: 3px;
+      width: 45px;
+      height: 39px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-1 .component-4 {
+      width: 278px;
+      height: 60px;
+      position: absolute;
+      left: 71px;
+      top: 320px;
+    }
+
+    .frame-1 .rectangle-4 {
+      background: rgba(128, 128, 128, 0.47);
+      border-radius: 58px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 0.5px;
+      width: 278px;
+      height: 60px;
+      position: absolute;
+      left: 2px;
+      top: 3px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-1 .create-server {
+      color: #ffffff;
+      text-align: left;
+      font: 26px "Fira Code", sans-serif;
+      position: absolute;
+      left: 36px;
+      top: 14px;
+      width: 211px;
+      height: 37px;
+    }
+
+    .frame-1 .component-3 {
+      width: 289px;
+      height: 55px;
+      position: absolute;
+      left: 10px;
+      top: 408px;
+    }
+
+    .frame-1 .rectangle-5,
+    .frame-2 .rectangle-5 {
+      background: rgba(128, 128, 128, 0.47);
+      border-radius: 58px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 0.5px;
+      width: 289px;
+      height: 55px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-1 .jump-to-server,
+    .frame-2 .jump-to-server {
+      color: #ffffff;
+      text-align: left;
+      font: 26px "Fira Code", sans-serif;
+      position: absolute;
+      left: 29px;
+      top: 11px;
+      width: 230px;
+      height: 32px;
+    }
+  </style>
+  <style>
+    .frame-1 .component-11 {
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      left: calc(50% - -124px);
+      top: 415px;
+    }
+
+    .frame-1 .ellipse-15 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-1 .go {
+      color: #d9d9d9;
+      text-align: center;
+      font: 25px "Font Awesome 5 Free", sans-serif;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-1 .component-8 {
+      width: 220px;
+      height: 71px;
+      position: absolute;
+      left: 92px;
+      top: 402px;
+    }
+
+    .frame-1 .rectangle-8 {
+      background: rgba(217, 217, 217, 0.33);
+      border-radius: 19px;
+      width: 220px;
+      height: 71px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-1 .servername {
+      color: #ffffff;
+      text-align: center;
+      font: 25px "Fira Code", sans-serif;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 174px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-1 .component-10 {
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      left: 236px;
+      top: 451px;
+    }
+
+    .frame-1 .copy {
+      color: #d9d9d9;
+      text-align: center;
+      font: 25px "Font Awesome 5 Free", sans-serif;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-1 .component-9 {
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      left: 173px;
+      top: 451px;
+    }
+
+    .frame-1 .share {
+      color: #d9d9d9;
+      text-align: center;
+      font: 25px "Font Awesome 5 Free", sans-serif;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+  <style>
+    .component-12 {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 90px;
+      left: 13px;
+    }
+
+    .component-12:hover {
+      transform: translateX(-5px) scale(1.1);
+    }
+
+    .ellipse-16 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .arrow-left {
+      color: #ffffff;
+      text-align: left;
+      font: 30px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      width: 30px;
+      height: 30px;
+    }
+
+    .frame-2 .component-28 {
+      width: 201px;
+      height: 38px;
+      position: absolute;
+      left: calc(50% - 93px);
+      top: 486px;
+    }
+
+    .frame-2 .rectangle-21 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 201px;
+      height: 38px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-2 .key {
+      color: #ffffff;
+      text-align: left;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 9.57px;
+      top: 4px;
+      width: 29.13px;
+      height: 32.57px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-2 .servername {
+      color: #ffffff;
+      text-align: left;
+      font: 20px "Poppins", sans-serif;
+      position: absolute;
+      left: 48.63px;
+      top: 0px;
+      width: 126.44px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-2 .component-3 {
+      width: 289px;
+      height: 55px;
+      position: absolute;
+      left: 41px;
+      top: 556px;
+    }
+
+    .frame-2 .component-2,
+    .frame-3 .component-2,
+    .frame-4 .component-2,
+    .frame-9 .component-2 {
+      position: absolute;
+      left: 155px;
+      top: 115px;
+      width: 0;
+      overflow: visible;
+    }
+
+    .frame-2 .ellipse-1,
+    .frame-3 .ellipse-1,
+    .frame-9 .ellipse-1 {
+      border: 3px solid #fff;
+      position: absolute;
+      left: 80px;
+      top: -50px;
+      transform: scale(0.7);
+    }
+
+    .frame-2 .rectangle-9,
+    .frame-3 .rectangle-9 {
+      border: none;
+      background: rgba(217, 217, 217, 0.2);
+      border-radius: 30px;
+      width: 260px;
+      height: 270px;
+      position: absolute;
+      left: calc(50% - 130px);
+      top: calc(50% - 144px);
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-2 .qrcodebg,
+    .frame-3 .qrcodebg {
+      color: #ffffff;
+      text-align: center;
+      font: 150px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 95px;
+      top: 223px;
+      width: 170px;
+      height: 149px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-3 .component-8 {
+      width: 203px;
+      height: 47px;
+      position: absolute;
+      left: 83px;
+      top: 462px;
+    }
+
+    .frame-3 .rectangle-8 {
+      background: rgba(217, 217, 217, 0.33);
+      border-radius: 19px;
+      width: 203px;
+      height: 47px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .servername {
+      color: #ffffff;
+      text-align: center;
+      font: 26px "Fira Code", sans-serif;
+      position: absolute;
+      left: 15px;
+      top: 6px;
+      width: 167px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+  <style>
+    .frame-3 .component-31 {
+      width: 100px;
+      height: 30px;
+      position: absolute;
+      left: calc(50% - 48px);
+      top: 489px;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .frame-3 .component-312 {
+      width: 100px;
+      height: 30px;
+      position: absolute;
+      left: calc(50% + 10px);
+      top: 489px;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .frame-3 .component-311 {
+      width: 100px;
+      height: 30px;
+      position: absolute;
+      left: calc(50% - 110px);
+      top: 489px;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .frame-3 .rectangle-21 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 100px;
+      height: 30px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    @keyframes fadeOut {
+      0% {
+        opacity: 100%;
+      }
+
+      100% {
+        opacity: 30%;
+      }
+    }
+
+    .frame-3 .exit,
+    .frame-3 .stop {
+      color: #ff3333;
+      text-align: left;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 8px;
+      top: 2px;
+      width: 17px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-3 .terminate {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: 42px;
+      top: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-3 .rectangle-9 {
+      background: rgba(217, 217, 217, 0.2);
+      border-radius: 30px;
+      width: 224px;
+      height: 240px;
+      position: absolute;
+      left: calc(50% - 112px);
+      top: calc(50% - 144px);
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-3 .qrcodebg {
+      color: #ffffff;
+      text-align: center;
+      font: 175px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: calc(50% - 65px);
+      top: 221px;
+      width: 130px;
+      height: 134px;
+      filter: blur(11.5px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-3 .rectangle-7 {
+      background: rgba(217, 217, 217, 0.2);
+      border-radius: 30px;
+      width: 189px;
+      height: 180px;
+      position: absolute;
+      left: calc(50% - 94px);
+      top: calc(50% - 125px);
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-3 .component-8 {
+      width: 203px;
+      height: 47px;
+      position: absolute;
+      left: 83px;
+      top: 434px;
+    }
+
+    .frame-3 .rectangle-8 {
+      background: rgba(217, 217, 217, 0.33);
+      border-radius: 19px;
+      width: 203px;
+      height: 47px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-3 .servername {
+      color: #ffffff;
+      text-align: center;
+      font: 26px "Fira Code", sans-serif;
+      position: absolute;
+      left: 15px;
+      top: 6px;
+      width: 167px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-3 .component-9 {
+      width: 54px;
+      height: 57px;
+      position: absolute;
+      left: 49px;
+      top: 533px;
+    }
+
+    .frame-3 .ellipse-15 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 50%;
+      width: 54px;
+      height: 57px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-3 .share {
+      color: #d9d9d9;
+      text-align: center;
+      font: 25px "Font Awesome 5 Free", sans-serif;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 54px;
+      height: 57px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-3 .component-10 {
+      width: 53px;
+      height: 57px;
+      position: absolute;
+      left: calc(50% - 21px);
+      top: 532px;
+    }
+
+    .frame-3 .ellipse-152 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 50%;
+      width: 53px;
+      height: 57px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-3 .copy {
+      color: #d9d9d9;
+      text-align: center;
+      font: 25px "Font Awesome 5 Free", sans-serif;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 53px;
+      height: 57px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-3 .component-11 {
+      width: 53px;
+      height: 57px;
+      position: absolute;
+      left: calc(50% - -88px);
+      top: 533px;
+    }
+
+    .frame-3 .go {
+      color: #d9d9d9;
+      text-align: center;
+      font: 25px "Font Awesome 5 Free", sans-serif;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 53px;
+      height: 57px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-3 .qrcodebg {
+      filter: blur(4px);
+    }
+
+    .frame-3 .component-9 {
+      width: 54px;
+      height: 57px;
+      position: absolute;
+      left: 44px;
+      top: 542px;
+    }
+
+    .frame-2 .rectangle-7 {
+      background: rgba(217, 217, 217, 0.2);
+      border-radius: 30px;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      left: calc(50% - 100px);
+      top: calc(50% - 115px);
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-3 .ellipse-15 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 50%;
+      width: 54px;
+      height: 57px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-3 .share {
+      color: #d9d9d9;
+      text-align: center;
+      font: 25px "Font Awesome 5 Free", sans-serif;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 54px;
+      height: 57px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-3 .component-10 {
+      width: 53px;
+      height: 57px;
+      position: absolute;
+      left: calc(50% - 26px);
+      top: 541px;
+    }
+
+    .frame-3 .copy {
+      color: #d9d9d9;
+      text-align: center;
+      font: 25px "Font Awesome 5 Free", sans-serif;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 53px;
+      height: 57px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-3 .component-11 {
+      width: 53px;
+      height: 57px;
+      position: absolute;
+      left: calc(50% - -83px);
+      top: 542px;
+    }
+
+    .frame-3 .go {
+      color: #d9d9d9;
+      text-align: center;
+      font: 25px "Font Awesome 5 Free", sans-serif;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 53px;
+      height: 57px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+  <style>
+    .frame-4 .component-17 {
+      position: absolute;
+      display: inline-block;
+      bottom: 67px;
+      right: 62px;
+    }
+
+    .frame-4 .ellipse-1 {
+      border: 3px solid #fff;
+      position: absolute;
+      left: 100px;
+      top: -60px;
+      transform: scale(0.5);
+    }
+
+    .frame-4 .rectangle-9,
+    .frame-4 .rectangle-7 {
+      border: none;
+      background: rgba(217, 217, 217, 0.2);
+      border-radius: 15px;
+      width: 78px;
+      height: 77px;
+      position: absolute;
+      left: calc(50% - 128px);
+      top: calc(50% - 245px);
+    }
+
+    .frame-4 .rectangle-9 {
+      background: #fff9;
+    }
+
+    .frame-4 .component-8 {
+      width: 120px;
+      height: 37px;
+      position: absolute;
+      left: 138px;
+      top: 98px;
+    }
+
+    .frame-4 .rectangle-8 {
+      background: rgba(217, 217, 217, 0.33);
+      border-radius: 19px;
+      width: 120px;
+      height: 37px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-4 .servername {
+      color: #ffffff;
+      text-align: center;
+      font: 16px "Fira Code", sans-serif;
+      position: absolute;
+      left: 8.87px;
+      top: 4.72px;
+      width: 98.72px;
+      height: 28.34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-4 .servername {
+      color: #ffffff;
+      text-align: center;
+      font: 16px "Fira Code", sans-serif;
+      position: absolute;
+      left: 8.87px;
+      top: 4.72px;
+      width: 98.72px;
+      height: 28.34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-4 .rectangle-10 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 284px;
+      --height: 50px;
+      height: var(--height);
+      position: absolute;
+      left: 9px;
+      top: calc(100% - 16px - var(--height));
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-4 .ellipse-13 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      backdrop-filter: blur(2px);
+    }
+
+    .component-15 {
+      position: absolute;
+      left: 18px;
+      top: 579px;
+    }
+
+    .frame-4 .ellipse-142 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-4 .send {
+      color: #ffffff;
+      text-align: center;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .component-16 {
+      position: absolute;
+      left: 244px;
+      top: 579px;
+    }
+
+    .frame-4 .ellipse-15 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-4 .attach {
+      color: #ffffff;
+      text-align: center;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-4 .emoji2 {
+      color: #ffffff;
+      text-align: center;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-4 .type-a-message {
+      color: #ffffff;
+      --height: 50px;
+      text-align: center;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: 52px;
+      top: calc(100% - 16px - var(--height));
+      width: 189px;
+      height: var(--height);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /*emoji*/
+    .frame-4 .component-38 {
+      width: 254px;
+      height: 202px;
+      position: absolute;
+      left: 18px;
+      top: 350px;
+    }
+
+    .frame-4 .ellipse-18 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 50%;
+      width: 25.1px;
+      height: 25.25px;
+      position: absolute;
+      left: -4.02px;
+      top: 185.84px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-4 .ellipse-182 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 50%;
+      width: 25.1px;
+      height: 25.25px;
+      position: absolute;
+      left: 233px;
+      top: 37px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-4 .bgforemoji {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-4 .component-34 {
+      width: 250.99px;
+      height: 50.5px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+
+    .frame-4 .component-18 {
+      width: 50.2px;
+      height: 50.5px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+
+    .frame-4 .ellipse-14 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 50%;
+      width: 40.16px;
+      height: 40.4px;
+      position: absolute;
+      left: 5.02px;
+      top: 5.05px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-4 .fileOpt,
+    .frame-4 .emoji {
+      color: #ffffff;
+      text-align: center;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 50.2px;
+      height: 50.5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-4 .component-19 {
+      width: 50.2px;
+      height: 50.5px;
+      position: absolute;
+      left: 150.59px;
+      top: 0px;
+    }
+
+    .frame-4 .component-22 {
+      width: 50.2px;
+      height: 50.5px;
+      position: absolute;
+      left: 200.79px;
+      top: 0px;
+    }
+
+    .frame-4 .component-20 {
+      width: 50.2px;
+      height: 50.5px;
+      position: absolute;
+      left: 100.4px;
+      top: 0px;
+    }
+
+    .frame-4 .component-21 {
+      width: 50.2px;
+      height: 50.5px;
+      position: absolute;
+      left: 50.2px;
+      top: 0px;
+    }
+
+    .frame-4 .component-35 {
+      width: 250.99px;
+      height: 50.5px;
+      position: absolute;
+      left: 0px;
+      top: 151.5px;
+    }
+
+    .frame-4 .component-36 {
+      width: 250.99px;
+      height: 50.5px;
+      position: absolute;
+      left: 0px;
+      top: 50.5px;
+    }
+
+    .frame-4 .component-37 {
+      width: 250.99px;
+      height: 50.5px;
+      position: absolute;
+      left: 0px;
+      top: 101px;
+    }
+
+    .frame-4 .component-39 {
+      width: 258.1px;
+      height: 50px;
+      position: absolute;
+      left: 25px;
+      top: 513px;
+    }
+
+    /*emoji bar end*/
+  </style>
+  <style>
+    .frame-5 .rectangle-3 {
+      background: rgba(128, 128, 128, 0.47);
+      border-radius: 36px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 0.5px;
+      width: 280.46px;
+      height: 195.13px;
+      position: absolute;
+      left: -19.46px;
+      top: -11.06px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-5 .ellipse-1 {
+      position: absolute;
+      left: 160.26px;
+      top: -50.08px;
+    }
+
+    .frame-5 .logout {
+      color: #ffffff;
+      text-align: center;
+      font: 30px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 213px;
+      top: 252px;
+      width: 50px;
+      height: 44.19px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-5 .component-22 {
+      width: 231px;
+      height: 38px;
+      position: absolute;
+      left: 105px;
+      top: 420px;
+    }
+
+    .frame-5 *[frame8c] .key {
+      top: 418px;
+      left: 145px;
+    }
+
+    .frame-5 *[frame8c] .rectangle-21 {
+      top: 410px;
+      left: 102px;
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 231px;
+      height: 38px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-5 *[frame8c] .change-your-password {
+      top: 418px;
+      left: 145px;
+    }
+
+    .rectangle-21 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 231px;
+      height: 38px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .key {
+      color: #ffffff;
+      text-align: left;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 11px;
+      top: 4px;
+      width: 33.48px;
+      height: 32.57px;
+    }
+
+    .change-your-password {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: 42px;
+      top: 6px;
+      width: 179px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-5 .component-21 {
+      width: 231px;
+      height: 38px;
+      position: absolute;
+      left: 105px;
+      top: 518px;
+    }
+
+    .frame-5 .rectangle-22 {
+      background: rgba(255, 153, 153, 0.2);
+      border-radius: 15px;
+      width: 231px;
+      height: 38px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-5 .tr-ash {
+      color: #ff3737;
+      text-align: left;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 26px;
+      top: 5px;
+      width: 33.48px;
+      height: 32.57px;
+    }
+
+    .frame-5 .delete-your-account {
+      color: #ff0000;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: 61.38px;
+      top: 0px;
+      width: 159.58px;
+      height: 35.83px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-5 .component-20 {
+      width: 191.48px;
+      height: 38px;
+      position: absolute;
+      left: 19px;
+      top: 373px;
+    }
+
+    .frame-5 .rectangle-24 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 186px;
+      height: 38px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-5 .google {
+      color: #ffffff;
+      text-align: left;
+      font: 25px "Font Awesome 6 Brands", sans-serif;
+      position: absolute;
+      left: 158px;
+      top: 5px;
+      width: 33.48px;
+      height: 32.57px;
+    }
+
+    .frame-5 .link-google-login {
+      color: #ffffff;
+      text-align: left;
+      font: 14px "Poppins", sans-serif;
+      position: absolute;
+      left: 19px;
+      top: 2px;
+      width: 159.58px;
+      height: 35.83px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-5 .component-19 {
+      width: 208.48px;
+      height: 38px;
+      position: absolute;
+      left: 19px;
+      top: 468px;
+    }
+
+    .frame-5 .rectangle-25 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 208px;
+      height: 38px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-5 .facebook {
+      color: #ffffff;
+      text-align: left;
+      font: 25px "Font Awesome 6 Brands", sans-serif;
+      position: absolute;
+      left: 175px;
+      top: 4px;
+      width: 33.48px;
+      height: 32.57px;
+    }
+
+    .frame-5 .link-facebook-login {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: 19px;
+      top: 2px;
+      width: 159.58px;
+      height: 35.83px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-5 .component-18 {
+      width: 231px;
+      height: 38px;
+      position: absolute;
+      left: 107px;
+      top: 325px;
+    }
+
+    .frame-5 .rectangle-23 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 231px;
+      height: 38px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-5 .user {
+      color: #ffffff;
+      text-align: left;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 16px;
+      top: 5px;
+      width: 33.48px;
+      height: 32.57px;
+    }
+
+    .frame-5 .change-profile-picture {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: 47px;
+      top: 0px;
+      width: 170px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-5 .sign-out {
+      color: #ffffff;
+      text-align: left;
+      font: 12px "Poppins", sans-serif;
+      position: absolute;
+      left: 210px;
+      top: 286px;
+      width: 78px;
+      height: 27px;
+    }
+  </style>
+  <style>
+    .frame-6 .server-krazy,
+    .frame-7 .server-krazy {
+      color: #ffffff;
+      font: 45px "Fira Code", sans-serif;
+      position: absolute;
+      left: calc(50% - 150px);
+      top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-6 .ellipse-1 {
+      border: 3px solid #fff;
+    }
+
+    .frame-6 .component-19 {
+      width: 240px;
+      height: 38px;
+      position: absolute;
+      left: calc(50% - 122px);
+      top: 571px;
+    }
+
+    .frame-6 .rectangle-25 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 239.45px;
+      height: 38px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-6 .facebook {
+      color: #ffffff;
+      text-align: left;
+      font: 25px "Font Awesome 6 Brands", sans-serif;
+      position: absolute;
+      left: 201.46px;
+      top: 4px;
+      width: 38.54px;
+      height: 32.57px;
+    }
+
+    .frame-6 .link-facebook-login {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: 21.87px;
+      top: 2px;
+      width: 183.71px;
+      height: 35.83px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-6 .component-20 {
+      width: 227px;
+      height: 38px;
+      position: absolute;
+      left: calc(50% - 116px);
+      top: 522px;
+    }
+
+    .frame-6 .rectangle-24 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 226.43px;
+      height: 38px;
+      position: relative;
+      backdrop-filter: blur(2px);
+      display: block;
+    }
+
+    .frame-6 .rectangle-245 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 100px;
+      height: 38px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-6 .google {
+      color: #ffffff;
+      text-align: left;
+      font: 25px "Font Awesome 6 Brands", sans-serif;
+      position: absolute;
+      left: 187.31px;
+      top: 5px;
+      width: 39.69px;
+      height: 32.57px;
+    }
+
+    .frame-6 .link-google-login {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: 22.52px;
+      top: 2px;
+      width: 189.18px;
+      height: 35.83px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-6 .glass {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 32px;
+      width: 274px;
+      height: 318px;
+      position: absolute;
+      left: calc(50% - 137px);
+      top: 168px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-6 .component-2 {
+      position: absolute;
+      left: -25px;
+      top: 162px;
+      overflow: visible;
+    }
+
+    .frame-6 .component-24 {
+      width: 112px;
+      height: 38px;
+      position: absolute;
+      left: calc(50% - 55px);
+      top: 437px;
+    }
+
+    .frame-6 .rectangle-242 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 112px;
+      height: 38px;
+      position: absolute;
+      left: calc(50% - 57px);
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-6 .signup {
+      color: #ffffff;
+      text-align: left;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 65.62px;
+      top: 5px;
+      width: 29.84px;
+      height: 28px;
+    }
+
+    .frame-6 .sign-up {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: calc(50% - 43px);
+      top: 1px;
+      width: 62px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-6 .component-22 {
+      width: 231px;
+      height: 38px;
+      position: absolute;
+      left: calc(50% - 116px);
+      top: 386px;
+    }
+
+    .frame-6 .rectangle-212 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 231px;
+      height: 38px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-6 .key {
+      color: #ffffff;
+      text-align: left;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 11px;
+      top: 4px;
+      width: 33.48px;
+      height: 32.57px;
+    }
+
+    .frame-6 .change-your-password {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: 42px;
+      top: 0px;
+      width: 179px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-6 .component-25 {
+      width: 250px;
+      height: 23px;
+      position: absolute;
+      left: 56px;
+      top: 496px;
+    }
+
+    .frame-6 .rectangle-22 {
+      background: rgba(119, 221, 119, 0.33);
+      border-radius: 15px;
+      width: 68.78px;
+      height: 23px;
+      position: absolute;
+      left: 191.05px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-6 .rectangle-21 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 199.78px;
+      height: 23px;
+      position: absolute;
+      left: -8.73px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-6 .texttosignup {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: 198.69px;
+      top: 0px;
+      width: 58.95px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-6 .already-have-an-account {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: -8.73px;
+      top: 0px;
+      width: 266.38px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-6 .gotosignup {
+      color: #d9d9d9;
+      text-align: center;
+      font: 20px "Font Awesome 5 Free", sans-serif;
+      position: absolute;
+      left: 237px;
+      top: -3px;
+      width: 29px;
+      height: 29px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-6 .component-23 {
+      width: 231px;
+      height: 38px;
+      position: absolute;
+      left: calc(50% - 116px);
+      top: 335px;
+    }
+
+    .frame-6 .rectangle-23 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 231px;
+      height: 38px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-6 .user,
+    .frame-6 .mail {
+      color: #ffffff;
+      text-align: left;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 16px;
+      top: 5px;
+      width: 33.48px;
+      height: 32.57px;
+    }
+
+    .frame-6 .username,
+    .frame-6 .email {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: 47px;
+      top: 0px;
+      width: 170px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-6 .component-18 {
+      width: 231px;
+      height: 38px;
+      position: absolute;
+      left: calc(50% - 116px);
+      top: 284px;
+    }
+  </style>
+  <style>
+    .frame-7 .didnt-have-an-account {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: -8.73px;
+      top: 0px;
+      width: 266.38px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-7 .component-19 {
+      width: 240px;
+      height: 38px;
+      position: absolute;
+      left: calc(50% - 124px);
+      top: 519px;
+    }
+
+    .frame-7 .rectangle-25 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 239.45px;
+      height: 38px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-7 .facebook {
+      color: #ffffff;
+      text-align: left;
+      font: 25px "Font Awesome 6 Brands", sans-serif;
+      position: absolute;
+      left: 201.46px;
+      top: 4px;
+      width: 38.54px;
+      height: 32.57px;
+    }
+
+    .frame-7 .link-facebook-login {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: 21.87px;
+      top: 2px;
+      width: 183.71px;
+      height: 35.83px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-7 .component-20 {
+      width: 227px;
+      height: 38px;
+      position: absolute;
+      left: calc(50% - 118px);
+      top: 477px;
+    }
+
+    .frame-7 .rectangle-24 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 226.43px;
+      height: 38px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-7 .google {
+      color: #ffffff;
+      text-align: left;
+      font: 25px "Font Awesome 6 Brands", sans-serif;
+      position: absolute;
+      left: 187.31px;
+      top: 5px;
+      width: 39.69px;
+      height: 32.57px;
+    }
+
+    .frame-7 .link-google-login {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: 22.52px;
+      top: 2px;
+      width: 189.18px;
+      height: 35.83px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-7 .glass {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 32px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 1px;
+      width: 274px;
+      height: 295px;
+      position: absolute;
+      left: calc(50% - 142px);
+      top: 139px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-7 .component-24 {
+      width: 112px;
+      height: 38px;
+      position: absolute;
+      left: calc(50% - 56px);
+      top: 346px;
+    }
+
+    .frame-7 .rectangle-245 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 100px;
+      height: 38px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-7 .rectangle-242 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 112px;
+      height: 38px;
+      position: absolute;
+      left: calc(50% - 57px);
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-7 .signup {
+      color: #ffffff;
+      text-align: left;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 65.62px;
+      top: 5px;
+      width: 29.84px;
+      height: 28px;
+    }
+
+    .frame-7 .sign-up {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: calc(50% - 43px);
+      top: 1px;
+      width: 62px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-7 .component-22 {
+      width: 258px;
+      height: 38px;
+      position: absolute;
+      left: calc(50% - 129px);
+      top: 254px;
+    }
+
+    .frame-7 .rectangle-212 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 258px;
+      height: 38px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-7 .mail,
+    .frame-7 .key {
+      color: #ffffff;
+      text-align: left;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 12.29px;
+      top: 4px;
+      width: 37.39px;
+      height: 32.57px;
+    }
+
+    .frame-7 .email,
+    .frame-7 .change-your-password {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: 46.91px;
+      top: 0px;
+      width: 199.92px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-7 .component-23 {
+      width: 258px;
+      height: 38px;
+      position: absolute;
+      left: calc(50% - 129px);
+      top: 189px;
+    }
+
+    .frame-7 .rectangle-23 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 258px;
+      height: 38px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-7 .user {
+      color: #ffffff;
+      text-align: left;
+      font: 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 17.87px;
+      top: 5px;
+      width: 37.39px;
+      height: 32.57px;
+    }
+
+    .frame-7 .change-profile-picture {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: 52.49px;
+      top: 0px;
+      width: 189.87px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-7 .component-26 {
+      width: 286.7px;
+      height: 29px;
+      position: absolute;
+      left: calc(50% - 143px);
+      top: 441px;
+    }
+
+    .frame-7 .rectangle-22 {
+      background: rgba(119, 221, 119, 0.33);
+      border-radius: 15px;
+      width: 88px;
+      height: 23px;
+      position: absolute;
+      left: 198.7px;
+      top: 3px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-7 .rectangle-21 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 198.98px;
+      height: 23px;
+      position: absolute;
+      left: 0px;
+      top: 3px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-7 .texttosignup {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Poppins", sans-serif;
+      position: absolute;
+      left: 206.59px;
+      top: 3px;
+      width: 58.72px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-7 .gotosignup {
+      color: #d9d9d9;
+      text-align: center;
+      font: 20px "Font Awesome 5 Free", sans-serif;
+      position: absolute;
+      left: 257.7px;
+      top: 0px;
+      width: 28.88px;
+      height: 29px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+  <style>
+    .frame-8 .component-22 {
+      width: 360px;
+      height: 0;
+      position: absolute;
+      left: calc(50% - 180px);
+      top: 10px;
+    }
+
+    .frame-8 .rectangle-21 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 278px;
+      height: 333.01px;
+      position: absolute;
+      left: calc(50% - 139px);
+      top: 199px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-8 .component-30 {
+      width: 231.4px;
+      height: 42.86px;
+      position: absolute;
+      left: calc(50% - 116px);
+      top: 459.41px;
+    }
+
+    .frame-8 .rectangle-23 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 231.4px;
+      height: 42.86px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-8 .new-password {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Inter", sans-serif;
+      position: absolute;
+      left: 35.34px;
+      top: 1.1px;
+      width: 193px;
+      height: 41.76px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-8 .passico {
+      color: #ffffff;
+      text-align: left;
+      font: 20px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 7.34px;
+      top: 9.89px;
+      width: 20px;
+      height: 21.98px;
+    }
+
+    .frame-8 .component-29 {
+      width: 232.07px;
+      height: 42.86px;
+      position: absolute;
+      left: calc(50% - 116px);
+      top: 300.04px;
+    }
+
+    .frame-8 .or {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Fira Code", sans-serif;
+      position: absolute;
+      left: calc(50% - 9.03px);
+      top: 51.66px;
+      width: 19px;
+      height: 14.29px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-8 .rectangle-22 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 231.4px;
+      height: 42.86px;
+      position: absolute;
+      left: 0.66px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-8 .current-password {
+      color: #ffffff;
+      text-align: left;
+      font: 15px "Inter", sans-serif;
+      position: absolute;
+      left: 37px;
+      top: 0px;
+      width: 185px;
+      height: 42.86px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-8 .passico2 {
+      color: #ffffff;
+      text-align: left;
+      font: 20px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 11px;
+      top: 9.89px;
+      width: 20px;
+      height: 21.98px;
+    }
+
+    .frame-8 .component-33 {
+      width: 162px;
+      height: 28.51px;
+      position: absolute;
+      left: calc(50% - 81px);
+      top: 413.37px;
+    }
+
+    .frame-8 .rectangle-222 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 162px;
+      height: 28.51px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-8 .fbico {
+      color: #ffffff;
+      text-align: left;
+      font: 20px "Font Awesome 6 Brands", sans-serif;
+      position: absolute;
+      left: 4px;
+      top: 3.29px;
+      width: 22.27px;
+      height: 21.93px;
+    }
+
+    .frame-8 .fb-co {
+      color: #ffffff;
+      text-align: center;
+      font: 12px "Poppins", sans-serif;
+      position: absolute;
+      left: 26px;
+      top: 0px;
+      width: 136px;
+      height: 28.51px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-8 .component-32 {
+      width: 162px;
+      height: 28.51px;
+      position: absolute;
+      left: calc(50% - 81px);
+      top: 377.19px;
+    }
+
+    .frame-8 .googleico {
+      color: #ffffff;
+      text-align: left;
+      font: 20px "Font Awesome 6 Brands", sans-serif;
+      position: absolute;
+      left: 10.52px;
+      top: 3.29px;
+      width: 21.04px;
+      height: 21.93px;
+    }
+
+    .frame-8 .google-co {
+      color: #ffffff;
+      text-align: center;
+      font: 12px "Poppins", sans-serif;
+      position: absolute;
+      left: 31.56px;
+      top: 0px;
+      width: 130.44px;
+      height: 28.51px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-8 .change-your-password {
+      color: #ffffff;
+      text-align: left;
+      position: absolute;
+      left: 104.89px;
+      top: 233px;
+      width: 250.86px;
+      height: 43.73px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .frame-8 .key {
+      color: #ffffff;
+      text-align: left;
+      font: 50px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 51px;
+      top: 228px;
+      width: 48.16px;
+      height: 41.76px;
+    }
+
+    .frame-8 .component-27 {
+      width: 118px;
+      height: 50px;
+      position: absolute;
+      left: calc(50% - 59px);
+      top: 522px;
+    }
+
+    .frame-8 .rectangle-25 {
+      background: rgba(153, 153, 153, 0.33);
+      border-radius: 15px;
+      width: 118px;
+      height: 50px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-8 .change {
+      color: #ffffff;
+      text-align: center;
+      font: 15px "Fira Code", sans-serif;
+      position: absolute;
+      left: 8.98px;
+      top: 6.45px;
+      width: 82.09px;
+      height: 37.1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-8 .gotosignup {
+      color: #d9d9d9;
+      text-align: center;
+      font: 20px "Font Awesome 5 Free", sans-serif;
+      position: absolute;
+      left: 80.8px;
+      top: 3.23px;
+      width: 37.05px;
+      height: 46.77px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+  <style>
+    .frame-9 .rectangle-9 {
+      border: none;
+      background: rgba(217, 217, 217, 0.2);
+      border-radius: 30px;
+      width: 326px;
+      height: 397px;
+      position: absolute;
+      left: calc(50% - 163px);
+      top: calc(50% - 135px);
+      backdrop-filter: blur(2px);
+    }
+
+    .frame-9 .qrcodebg {
+      color: #ffffff;
+      text-align: center;
+      font: 400 175px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: calc(50% - 94px);
+      top: 254px;
+      width: 188px;
+      height: 221px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame-9 .rectangle-7 {
+      background: rgba(217, 217, 217, 0.2);
+      border-radius: 30px;
+      width: 276px;
+      height: 298px;
+      position: absolute;
+      left: calc(50% - 138px);
+      top: calc(50% - 104px);
+      backdrop-filter: blur(2px);
+    }
+  </style>
+  <style>
+    @keyframes rot {
+      0% {
+        transform: scale(8.5) rotate(0deg);
+      }
+
+      100% {
+        transform: scale(8.5) rotate(360deg);
+      }
+    }
+
+    @keyframes rotsmall {
+      0% {
+        transform: scale(4.5) translate(20px, -28px) rotate(47deg);
+      }
+
+      100% {
+        transform: scale(4.5) translate(20px, -28px) rotate(407deg);
+      }
+    }
+
+    .frame-10 .active {
+      background: #d98344;
+    }
+
+    .frame-10 .gear {
+      top: 298px;
+      left: -83px;
+      width: 25px;
+      transform: scale(8.5) rotate(360deg);
+      animation: rot 15s 0s infinite linear forwards;
+      color: #656565;
+      transition: all 4s;
+      animation-delay: 4.5s !important;
+      -webkit-text-stroke: 0.1px #fff;
+    }
+
+    .frame-10 .gear.gear2 {
+      transform: scale(4.5) translate(20px, -28px) rotate(47deg);
+      animation: rotsmall 5s 0s infinite linear reverse;
+    }
+
+    .frame-10 .component-7 {
+      opacity: 0 !important;
+    }
+  </style>
+  <style>
+    .frame-11 .search {
+      color: #ffffff;
+      text-align: center;
+      font: 400 25px "Font Awesome 6 Free", sans-serif;
+      position: absolute;
+      left: 44px;
+      top: 100px;
+      width: 22px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    .searchBar {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 25px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 1px;
+      width: 262px;
+      height: 44px;
+      position: absolute;
+      left: 27px;
+      top: 125px;
+      backdrop-filter: blur(5px);
+    }
+
+    .searchBar .placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #fff;
+      font: 17px "Poppins";
+      width: 100%;
+      height: 100%;
+      display: flex !important;
+      padding: 0 1em;
+      align-items: center;
+    }
+
+    .searchShadow {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 25px;
+      border-style: solid;
+      border-color: #ffffff;
+      border-width: 1px;
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      left: 282px;
+      top: 125px;
+      backdrop-filter: blur(5px);
+    }
+  </style>
+  <script defer>
+    let shiftFrame = (frameno) => {};
+
+    let inLoginPage = false;
+    frameDict = {
+      frames: [
+        "frame-1",
+        "frame-2",
+        "frame-3",
+        "frame-4",
+        "frame-5",
+        "frame-6",
+        "frame-7",
+        "frame-8",
+        "frame-9",
+        "frame-10",
+        "frame-11",
+      ],
+      components: [
+        "frame1c",
+        "frame2c",
+        "frame3c",
+        "frame4c",
+        "frame5c",
+        "frame6c",
+        "frame7c",
+        "frame8c",
+        "frame9c",
+        "frame10c",
+        "frame11c",
+      ],
+      units: [
+        "frame1",
+        "frame2",
+        "frame3",
+        "frame4",
+        "frame5",
+        "frame6",
+        "frame7",
+        "frame8",
+        "frame9",
+        "frame10",
+        "frame11",
+      ],
+    };
+    function sftFrm(frameno) {
+      if (frameno === undefined || frameno >= frameDict.length || frameno < 0) {
+      } else {
+        _("*[rootScreen]").setAttribute("class", frameDict.frames[frameno]);
+        disable(_All(`button`));
+        disable(_All(`a`));
+        disable(_All(`input`));
+
+        enable(_All(`button[${frameDict.components[frameno]}]`));
+        enable(_All(`button[${frameDict.units[frameno]}]`));
+        enable(_All(`*[${frameDict.components[frameno]}] button`));
+
+        enable(_All(`a[${frameDict.components[frameno]}]`));
+        enable(_All(`a[${frameDict.units[frameno]}]`));
+        enable(_All(`*[${frameDict.components[frameno]}] a`));
+
+        enable(_All(`input[${frameDict.components[frameno]}]`));
+        enable(_All(`input[${frameDict.units[frameno]}]`));
+        enable(_All(`*[${frameDict.components[frameno]}] input`));
+
+        enable(_All("*[allc] button,*[allc] a,*[allc] input"));
+        enable(_All("button[allc],input[allc],a[allc]"));
+      }
+    }
+    let frameHistory = [1];
+    let validListen = (target) => {
+      if (target.value == "") {
+        if (target.parentElement.classList.contains("valid"))
+          target.parentElement.classList.remove("valid");
+      } else {
+        if (!target.parentElement.classList.contains("valid"))
+          target.parentElement.classList.add("valid");
+      }
+    };
+    window.addEventListener("load", () => {
+      var inputs = _All("*[contenteditable]");
+      inputs.forEach((input) => {
+        input.addEventListener("focus", function () {
+          this.classList.add("focused");
+        });
+        input.addEventListener("blur", function () {
+          this.classList.remove("focused");
+        });
+      });
+      handlerealInputonEnter = (realinput) => {
+        realinput.addEventListener("keyup", (e) => {
+          if (e.key == "Enter" && !e.shiftKey && e.target.dataset.onenter)
+            eval(e.target.dataset.onenter);
+          validListen(e.target);
+        });
+        realinput.addEventListener("keydown", (e) => {
+          validListen(e.target);
+        });
+        realinput.addEventListener("keydown", (e) => {
+          validListen(e.target);
+        });
+      };
+      _All(".inputComponent input").forEach(handlerealInputonEnter);
+      _All(".inputComponent textArea").forEach(handlerealInputonEnter);
+    });
+    let back = () => {};
+  </script>
+  <script defer>
+    var scanner = new Instascan.Scanner({
+      video: document.getElementById("preview"),
+      scanPeriod: 1,
+      mirror: false,
+    });
+    scanner.addListener("scan", function (content) {
+      console.log(content);
+      if (content.length == 8) {
+        killQr();
+        $("input#serverNameInput").val(content);
+        jumpToServer();
+      } else if (
+        content.includes("serverkrazy.web.app") ||
+        content.includes("serverkrazy.firebase.app")
+      ) {
+        killQr();
+        let the_params = processForParams(content);
+        if (the_params["server"]) {
+          $("input#serverNameInput").val(the_params["server"]);
+          jumpToServer();
+        }
+        if (the_params["img"]) {
+          firebase
+            .storage()
+            .ref(the_params["img"])
+            .getDownloadURL()
+            .then((fileURL) => {
+              $(document.body).append(
+                `<section class="impNotify screen">${HTMLforFile(
+                  "image",
+                  fileURL
+                )}<a class="icon link" target="_blank" href="${
+                  window.location.origin +
+                  window.location.pathname +
+                  "?img=" +
+                  the_params["img"]
+                }"></a> </section>`
+              );
+            });
+        }
+        if (the_params["vid"]) {
+          firebase
+            .storage()
+            .ref(the_params["vid"])
+            .getDownloadURL()
+            .then((fileURL) => {
+              $(document.body).append(
+                `<section class="impNotify screen">${HTMLforFile(
+                  "video",
+                  fileURL,
+                  ""
+                )}<a class="icon link" target="_blank" href="${
+                  window.location.origin +
+                  window.location.pathname +
+                  "?vid=" +
+                  the_params["vid"]
+                }"></a> </section>`
+              );
+            });
+        }
+
+        if (the_params["aud"]) {
+          firebase
+            .storage()
+            .ref(the_params["aud"])
+            .getDownloadURL()
+            .then((fileURL) => {
+              $(document.body).append(
+                `<section class="impNotify screen">${HTMLforFile(
+                  "audio",
+                  fileURL,
+                  ""
+                )}<a class="icon link" target="_blank" href="${
+                  window.location.origin +
+                  window.location.pathname +
+                  "?aud=" +
+                  the_params["aud"]
+                }"></a> </section>`
+              );
+            });
+        }
+        if (the_params["file"]) {
+          firebase
+            .storage()
+            .ref(the_params["file"])
+            .getDownloadURL()
+            .then((fileURL) => {
+              $(document.body).append(
+                `<section class="impNotify screen">${HTMLforFile(
+                  "",
+                  fileURL,
+                  ""
+                )}<a class="icon link" target="_blank" href="${
+                  window.location.origin +
+                  window.location.pathname +
+                  "?file=" +
+                  the_params["file"]
+                }"></a> </section>`
+              );
+            });
+        }
+      } else {
+        window.open(content);
+      }
+      //window.location.href=content;
+    });
+    let initQr = () => {};
+    let killQr = () => {};
+  </script>
+  <script defer>
+    let reset = (input) => {
+      input.value = "";
+      if (angular.element(input)) angular.element(input).val("");
+      setTimeout(() => validListen(input), 0);
+    };
+    //for Angular
+    let dummy = {
+      user: {
+        displayName: "user" + Math.floor(Math.random() * Math.pow(10, 4)),
+      },
+      profilePic: "profilepic.png",
+    };
+    let FB = new FBmanage(firebaseConfig);
+    let ServUtil = new Server(FB, $("#msgBucket"));
+
+    var nguser = angular.module("App", []);
+    nguser.controller("AppController", function ($scope) {
+      initalLoad = new Loader();
+
+      $scope.user = dummy.user;
+      $scope.typingmessage = "";
+      $scope.emojiActive = false;
+      $scope.fileOptActive = false;
+      $scope.isOwner = false;
+      $scope.settings = settings;
+      $scope.updateSettings = () => {
+        settings = $scope.settings;
+      };
+      $scope.calculateHeightBg = (e) => {
+        return Math.min(Math.max((calculatelinebreaks(e) + 1) * 20, 50), 350);
+      };
+      $scope.calculateHeightinputComp = (e) => {
+        return Math.min(Math.max((calculatelinebreaks(e) + 1) * 20, 50), 350);
+      };
+      $scope.addEmoji = (emoji) => {
+        $scope.typingmessage += emoji;
+        setTimeout(() => {
+          validListen(_("#Message"));
+          _("#Message").setSelectionRange(
+            $scope.typingmessage.length,
+            $scope.typingmessage.length
+          );
+          _("#Message").focus();
+        }, 0);
+      };
+      $scope.sendMessage = () => {
+        if ($scope.typingmessage == "") $("input#Message").focus();
+        else {
+          $scope.emojiActive = false;
+          $scope.fileOptActive = false;
+
+          if ($scope.typingmessage.startsWith("//qr"))
+            ServUtil.sendQr($scope.typingmessage.replace("//qr", ""), 400);
+          else ServUtil.sendMessage($scope.typingmessage);
+          $scope.typingmessage = "";
+        }
+      };
+      $scope.isQrScanning = false;
+      $scope.server = "";
+      $scope.serverName = "";
+      $scope.serverOwner = "";
+      $scope.isServer = false;
+      $scope.isCredential = false;
+      $scope.providers = [];
+      $scope.isProvider = (check) => {
+        return $scope.providers.includes(check) === true;
+      };
+      $scope.shareLink = () => {
+        navigator.share({
+          title: "Share ServerKrazy",
+          text: "Try this cool website to share data!",
+          url: "https://serverkrazy.web.app?server=" + $scope.serverName,
+        });
+      };
+      $scope.copy = (...Args) => {
+        var arg = "";
+        Args.forEach((argument) => {
+          arg += argument;
+        });
+        navigator.clipboard.writeText(arg).then(alert("copied"));
+      };
+      $scope.disp = (content, dum) => {
+        if (content == null) return dum;
+        return content;
+      };
+      $scope.short = (name) => {
+        if (name == null)
+          return "user" + Math.floor(Math.random() * Math.pow(10, 4));
+        return name.split(" ")[0];
+      };
+
+      shiftFrame = (frameno) => {
+        if (frameno == 2 && $scope.isServer) {
+        } else {
+          if (frameno == 2 || frameno == 9) initQr();
+          else killQr();
+
+          if (frameno == 6 || frameno == 7) {
+            inLoginPage = true;
+          } else {
+            inLoginPage = false;
+
+            if (frameno == 1) frameHistory = [1];
+            else if (frameno == frameHistory[frameHistory.length - 1]) {
+              //going to the same frame they are now in..
+            } else if (
+              frameHistory.length > 1 &&
+              frameno == frameHistory[frameHistory.length - 2]
+            ) {
+              //they are going to the previous page..
+              //so better to remove this entry this page  and not enter that page
+
+              frameHistory.pop(frameno);
+            } else {
+              frameHistory.push(frameno);
+            }
+          }
+
+          sftFrm(frameno - 1);
+        }
+      };
+      back = () => {
+        frameHistory.pop();
+        if (frameHistory[frameHistory.length - 1] == 2 && $scope.isServer) {
+          back();
+        } else {
+          if (
+            frameHistory[frameHistory.length - 1] == 2 ||
+            frameHistory[frameHistory.length - 1] == 9
+          )
+            initQr();
+          else killQr();
+
+          sftFrm(frameHistory[frameHistory.length - 1] - 1);
+        }
+      };
+
+      FB.whenSignIn = (user) => {
+        log("signed in as");
+        if (inLoginPage) shiftFrame(frameHistory[frameHistory.length - 1]);
+
+        $scope.$apply(function () {
+          $scope.user = FB.currentUser;
+          $scope.profilePic = FB.profilePic;
+          $scope.isCredential = FB.credential != null;
+          $scope.providers = FB.providers();
+        });
+        log(user);
+        initalLoad.destroy();
+      };
+      FB.whenSignOut = () => {
+        $scope.$apply(function () {
+          $scope.isCredential = FB.credential != null;
+          $scope.profilePic = dummy.profilePic;
+          $scope.user = dummy.user;
+          $scope.providers = FB.providers();
+        });
+
+        shiftFrame(7);
+
+        initalLoad.destroy();
+      };
+      initQr = () => {
+        if ($scope.isQrScanning) {
+        } else {
+          Instascan.Camera.getCameras()
+            .then(function (cameras) {
+              if (cameras.length > 0) {
+                $scope.$apply(function () {
+                  $scope.canQrScan = true;
+                  $scope.isQrScanning = true;
+                  if (cameras.length % 2 != 0) scanner.mirror = true;
+                  scanner.start(cameras[cameras.length - 1]);
+                });
+              } else {
+                $scope.$apply(function () {
+                  $scope.isQrScanning = false;
+                });
+              }
+            })
+            .catch(function (e) {
+              $scope.$apply(function () {
+                $scope.isQrScanning = false;
+              });
+            });
+        }
+      };
+      killQr = () => {
+        if ($scope.isQrScanning) {
+          $scope.$apply(function () {
+            $scope.isQrScanning = false;
+          });
+          scanner.stop();
+        }
+      };
+      ServUtil.onServChange = () => {
+        $scope.$apply(function () {
+          $scope.server = ServUtil.server;
+          $scope.serverName = ServUtil.serverName;
+          $scope.serverOwner = ServUtil.serverOwner;
+          $scope.isServer = ServUtil.server != null;
+          $scope.typingmessage = "";
+          $scope.isOwner = ServUtil.serverOwner === FB.currentUser.uid;
+          $scope.emojiActive = false;
+          $scope.fileOptActive = false;
+        });
+        if (ServUtil.server == null) $("#msgBucket").html("");
+        validListen(_("#Message"));
+        if (ServUtil.server == null && FB.currentUser != null) shiftFrame(1);
+      };
+    });
+
+    $("#msgBucket")
+      .on(
+        "drag dragstart dragend dragover dragenter dragleave drop",
+        function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      )
+      .on("dragover dragenter", function () {
+        $("#msgBucket").addClass("is-dragover");
+      })
+      .on("dragleave dragend drop", function () {
+        $("#msgBucket").removeClass("is-dragover");
+      })
+      .on("drop", function (e) {
+        handleFileList(e.originalEvent.dataTransfer.files);
+      });
+
+    function handleFileList(files) {
+      Array.from(files).forEach((the_file) => {
+        ServUtil.sendFile($("#Message").val(), the_file);
+      });
+    }
+    function handleFileInput(e) {
+      console.log("handling file input");
+      console.log(e);
+      handleFileList(e.files);
+    }
+    function deleteAcc() {
+      if (FB.credential) FB.deleteAccount();
+      if (FB.providers().includes("password"))
+        FB.deleteAccount(prompt("Enter password"));
+    }
+    function signUp() {
+      if ($("input#email").val() == "") $("input#email").focus();
+      else if ($("input#pass").val() == "") $("input#pass").focus();
+      else if ($("input#username").val() == "") $("input#username").focus();
+      else {
+        FB.signUp(
+          $("input#email").val(),
+          $("input#pass").val(),
+          $("input#username").val()
+        );
+
+        reset(_("input#email"));
+        reset(_("input#pass"));
+        reset(_("input#username"));
+      }
+    }
+    function login() {
+      if ($("input#email").val() == "") $("input#email").focus();
+      else if ($("input#pass").val() == "") $("input#pass").focus();
+      else {
+        FB.signinWithPass($("input#email").val(), $("input#pass").val());
+        reset(_("input#email"));
+        reset(_("input#pass"));
+        reset(_("input#username"));
+      }
+    }
+    function signOut() {
+      if (ServUtil.server != null) {
+        if (confirm("Signing out stops the server.Continue..."))
+          ServUtil.exitServer();
+        else return;
+      }
+      FB.signout(() => {
+        shiftFrame(7);
+      });
+    }
+    function changePassword() {
+      if ($("input#newPass").val() == "") $("input#newPass").focus();
+      else {
+        if (FB.credential != null)
+          FB.changePassword($("input#newPass").val(), "", () => {
+            alert("password changed!");
+            if (frameHistory[frameHistory.length - 1] == 8) back();
+          });
+        else {
+          if (
+            FB.providers().includes("password") == true &&
+            $("input#currentPass").val() == ""
+          )
+            $("input#currentPass").focus();
+          else if (
+            FB.providers().includes("password") == false &&
+            FB.providers().includes("google.com") == true
+          )
+            $("button#reAuthgoogle").focus();
+          else if (
+            FB.providers().includes("password") == false &&
+            FB.providers().includes("google.com") == false &&
+            FB.providers().includes("facebook.com") == true
+          )
+            $("button#reAuthfacebook").focus();
+          else {
+            FB.changePassword(
+              $("input#newPass").val(),
+              $("input#currentPass").val(),
+              () => {
+                alert("password changed!");
+                if (frameHistory[frameHistory.length - 1] == 8) back();
+              }
+            );
+            reset(_("input#currentPass"));
+            reset(_("input#newPass"));
+          }
+        }
+      }
+    }
+    function createServer() {
+      ServUtil.createServer((e) => {
+        if (e === true) shiftFrame(3);
+        else {
+          alert("error");
+        }
+      });
+    }
+    function jumpToServer() {
+      if ($("input#serverNameInput").val() == "")
+        $("input#serverNameInput").focus();
+      else {
+        ServUtil.jumpToServer($("input#serverNameInput").val(), (e) => {
+          if (e === true) {
+            killQr();
+            shiftFrame(3);
+          } else {
+            alert("This server doesn't exist");
+            initQr();
+          }
+        });
+        reset(_("input#serverNameInput"));
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      setInterval(() => {
+        _All("*[timeid]").forEach(
+          (el) => (el.innerHTML = simpleTime(Number(el.getAttribute("timeid"))))
+        );
+      }, 1000);
+      FB.init();
+      FB.firstLogin = () => {
+        ServUtil.findFileInURL();
+      };
+    });
+
+    window.addEventListener("unload", function () {
+      ServUtil.exitServer();
+      return null;
+    });
+  </script>
+</html>
